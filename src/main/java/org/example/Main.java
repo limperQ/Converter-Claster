@@ -9,7 +9,7 @@ import org.example.utils.PropertyManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class    Main
+public class Main
 {
     private static Logger log = LoggerFactory.getLogger(Main.class.getSimpleName());
 
@@ -47,17 +47,17 @@ public class    Main
         {
             server.start();
             log.error("Server has started at port: " + port);
-            //server.join();
+//            server.join();
         }catch(Throwable t){
             log.error("Error while starting server", t);
         }
     }
 
     private static void runServer() {
-        int port = PropertyManager.getPropertyAsInteger("server.port", 8026);
+        int transportPort = PropertyManager.getPropertyAsInteger("serverTransport.port", 8026);
         String contextStr = PropertyManager.getPropertyAsString("server.context", "server");
 
-        runServer(port, contextStr);
+        runServer(transportPort, contextStr);
     }
 
     public static void stopServer() {
