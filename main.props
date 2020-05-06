@@ -1,4 +1,6 @@
-server.port = 8026
+serverTransport.port = 8026
+serverConverter1.port = 8027
+serverConverter2.port = 8028
 server.context = /
 
 log4j.rootLogger= TRACE, stdout, file
