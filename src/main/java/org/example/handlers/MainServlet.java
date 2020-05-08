@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+@WebServlet("/convert")
 public class MainServlet extends HttpServlet
 {
     private static Logger log = LoggerFactory.getLogger(MainServlet.class.getSimpleName());
@@ -44,7 +46,7 @@ public class MainServlet extends HttpServlet
     {
         response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_OK);
-        Answer answer = new Answer("OK", null);
+        Answer answer = new Answer("OK - " + request.getRequestURL(), null);
         String str = Common.getPrettyGson().toJson(answer);
         log.error("Json:{}", str);
         response.getWriter().println(str);
