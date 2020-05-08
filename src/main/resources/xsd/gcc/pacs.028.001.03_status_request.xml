@@ -1,0 +1,22 @@
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03">
+    <FIToFIPmtStsReq>
+        <GrpHdr>
+            <MsgId>STATREQ016</MsgId>
+            <CreDtTm>2018-05-10T00:27:25</CreDtTm>
+        </GrpHdr>
+        <OrgnlGrpInf>
+            <OrgnlMsgId>1014395454</OrgnlMsgId>
+            <OrgnlMsgNmId>pacs.009.001.08</OrgnlMsgNmId>
+        </OrgnlGrpInf>
+        <TxInf>
+            <InstgAgt>
+                <FinInstnId>
+                    <BICFI>NBPAAFK0</BICFI>
+                </FinInstnId>
+            </InstgAgt>
+            <OrgnlTxRef>
+                <IntrBkSttlmDt>2018-05-10</IntrBkSttlmDt>
+            </OrgnlTxRef>
+        </TxInf>
+    </FIToFIPmtStsReq>
+</Document>

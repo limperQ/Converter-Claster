@@ -57,6 +57,8 @@ public class MainServletTest
         Answer a = Common.getPrettyGson().fromJson(respStr, Answer.class);
 
         org.junit.Assert.assertEquals("Eric1", a.getItems().get(0).getName());
+
+
     }
 
 
