@@ -42,20 +42,25 @@ public class TransportServlet extends HttpServlet {
         }
 
         String redirectingPath = getServerUrl();
-        redirectingPath += "/convert";
-        ++requestCounter;
 
-        HttpClient client = HttpClientBuilder.create().build();
-        HttpPost request = new HttpPost(redirectingPath);
-        StringEntity entity = new StringEntity(reqStr);
         HttpResponse response = null;
-        request.setEntity(entity);
-        try {
-            response = client.execute(request);
-        } catch (HttpHostConnectException e) {
-            e.getMessage();
 
-        }
+        boolean isFault = false;
+        do {
+            try {
+                HttpClient client = HttpClientBuilder.create().build();
+                HttpPost request = new HttpPost(redirectingPath);
+                StringEntity entity = new StringEntity(reqStr);
+                request.setEntity(entity);
+
+                response = client.execute(request);
+                isFault = false;
+            } catch (HttpHostConnectException e) {
+                redirectingPath = changeServer();
+                isFault = true;
+            }
+        } while (isFault);
+
         if(response.getStatusLine().getStatusCode() != HttpServletResponse.SC_OK) {
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("Bad request", null)));
@@ -69,12 +74,13 @@ public class TransportServlet extends HttpServlet {
         resp.setContentType("application/json");
         resp.setStatus(HttpServletResponse.SC_OK);
         resp.getWriter().print(convertedResponseStr);
-        log.error("HttpMethod: POST. Server: " + redirectingPath);
+        log.error("HttpMethod: POST. Server: " + redirectingPath + ". Status: OK");
+        ++requestCounter;
     }
 
-    public void sendToAnotherServer() {
+    public String changeServer() {
         ++requestCounter;
-        String redirectingPath = getServerUrl();
+        return getServerUrl();
     }
 
     @Override
@@ -82,7 +88,7 @@ public class TransportServlet extends HttpServlet {
         String redirectingPath = getServerUrl();
         resp.sendRedirect(redirectingPath);
         ++requestCounter;
-        log.error("HttpMethod: GET. Server: " + redirectingPath);
+        log.error("HttpMethod: GET. Server: " + redirectingPath + ". Status: OK");
     }
 
     public String getServerUrl() {
