@@ -9,10 +9,11 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.example.balancer.IBalancer;
+import org.example.balancer.LeastConnectionsBalancer;
+import org.example.balancer.RoundRobinBalancer;
 import org.example.crypto.AesCipher;
 import org.example.model.Answer;
-import org.example.model.ConvertResponse;
-import org.example.model.Item;
 import org.example.utils.Common;
 import org.example.utils.PropertyManager;
 import org.slf4j.Logger;
@@ -27,11 +28,25 @@ import java.io.IOException;
 
 @WebServlet("/")
 public class TransportServlet extends HttpServlet {
-    private static int tryCounter = 0;
-    private static int requestCounter = 0;
-    private static int serverCounter = 3;
     private static Logger log = LoggerFactory.getLogger(TransportServlet.class.getSimpleName());
+    private String balanceMethod;
+    private static int tryCounter;
+    private static int serverCounter;
+    private IBalancer balancer;
     static final String secretKey = "BeGvWqgrVd42hfeH";
+
+    @Override
+    public void init(){
+        balanceMethod = PropertyManager.getPropertyAsString("balanceMethod", null);
+        serverCounter = PropertyManager.getPropertyAsString("addresses", null).split(";").length;
+        tryCounter = 0;
+
+        switch (balanceMethod){
+            case "RoundRobin": balancer = new RoundRobinBalancer(); break;
+            case "LeastConnections": balancer = new LeastConnectionsBalancer(); break;
+        }
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String reqStr = IOUtils.toString(req.getInputStream());
@@ -41,11 +56,11 @@ public class TransportServlet extends HttpServlet {
         if (StringUtils.isBlank(isEncrypted ? decryptedStr : reqStr)) {
             resp.setContentType("application/json");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("BEEEE", null)));
+            resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("Empty body", null)));
             return;
         }
 
-        String redirectingPath = getServerUrl();
+        String redirectingPath = balancer.getServerUrl();
 
         HttpResponse response = null;
         HttpClient client;
@@ -83,14 +98,14 @@ public class TransportServlet extends HttpServlet {
         resp.setContentType(isEncrypted ? "text/text" : "application/json");
         resp.setStatus(HttpServletResponse.SC_OK);
 
-        resp.getWriter().print(isEncrypted ? encryptedStr : convertedResponseStr);
+        resp.getWriter().print(balancer.getServerUrl() + "\n" + (isEncrypted ? encryptedStr : convertedResponseStr));
         log.error("HttpMethod: POST. Server: " + redirectingPath + ". Status: OK");
-        ++requestCounter;
+        balancer.incrementRequestCounter();
     }
 
     public String changeServer() {
-        ++requestCounter;
-        return getServerUrl();
+        balancer.incrementRequestCounter();
+        return balancer.getServerUrl();
     }
 
     @Override
@@ -98,10 +113,4 @@ public class TransportServlet extends HttpServlet {
         resp.sendRedirect(req.getRequestURL().toString() + "convert");
     }
 
-    public String getServerUrl() {
-        String[] adresses = PropertyManager.getPropertyAsString("addresses", null).split(";");
-        String redirectingPath = adresses[requestCounter % serverCounter];
-        redirectingPath += "/convert";
-        return redirectingPath;
-    }
 }
