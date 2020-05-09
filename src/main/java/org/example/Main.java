@@ -4,6 +4,7 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHandler;
 import org.example.handlers.MainServlet;
+import org.example.handlers.TransportServlet;
 import org.example.utils.Common;
 import org.example.utils.PropertyManager;
 import org.slf4j.Logger;
@@ -41,7 +42,8 @@ public class    Main
         ServletHandler handler = new ServletHandler();
         server.setHandler(handler);
 
-        handler.addServletWithMapping(MainServlet.class, "/path");
+        handler.addServletWithMapping(MainServlet.class, "/convert");
+        handler.addServletWithMapping(TransportServlet.class, "/");
 
         try
         {
@@ -54,10 +56,15 @@ public class    Main
     }
 
     private static void runServer() {
-        int port = PropertyManager.getPropertyAsInteger("server.port", 8026);
+        int port = PropertyManager.getPropertyAsInteger("serverTransport.port", 8027);
+        int port2 = PropertyManager.getPropertyAsInteger("serverConverter1.port", 8028);
+        int port3 = PropertyManager.getPropertyAsInteger("serverConverter2.port", 8029);
+
         String contextStr = PropertyManager.getPropertyAsString("server.context", "server");
 
         runServer(port, contextStr);
+        //runServer(port2, contextStr);
+        runServer(port3, contextStr);
     }
 
     public static void stopServer() {

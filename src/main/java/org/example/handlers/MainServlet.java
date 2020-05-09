@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,51 +23,44 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.util.JAXBSource;
 import java.io.IOException;
 import java.io.StringReader;
-
+@WebServlet("/convert")
 public class MainServlet extends HttpServlet
 {
     private static Logger log = LoggerFactory.getLogger(MainServlet.class.getSimpleName());
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
-        String reqStr = IOUtils.toString(req.getInputStream());
-        resp.setContentType("application/json");
-        if(reqStr.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:admi.002.001.01\">"))
-        {
-            resp.setStatus(HttpServletResponse.SC_OK);
-            try {
-                JAXBContext jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.admi_002_001.Document.class);
-                Unmarshaller jaxbUnmarshaller = jc.createUnmarshaller();
+        try {
+            String reqStr = IOUtils.toString(req.getInputStream());
 
-                StringReader reader = new StringReader(reqStr);
-                iso.std.iso._20022.tech.xsd.admi_002_001.Document respObj = (Document) jaxbUnmarshaller.unmarshal(reader);
+            JAXBContext jc = null;
+            Unmarshaller jaxbUnmarshaller = null;
+            StringReader reader = new StringReader(reqStr);
+            Object respObj = null;
 
-                resp.getWriter().print(Common.getPrettyGson().toJson(respObj));
-            } catch (JAXBException e) {
-
-                e.printStackTrace();
+            if(reqStr.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:admi.002.001.01\">")) {
+                jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.admi_002_001.Document.class);
+                jaxbUnmarshaller = jc.createUnmarshaller();
+                respObj = (iso.std.iso._20022.tech.xsd.admi_002_001.Document) jaxbUnmarshaller.unmarshal(reader);
             }
-        }
-        else if(reqStr.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03\">")) {
-            resp.setStatus(HttpServletResponse.SC_OK);
-            try {
-                JAXBContext jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.pacs_028_001.Document.class);
-                Unmarshaller jaxbUnmarshaller = jc.createUnmarshaller();
-
-                StringReader reader = new StringReader(reqStr);
-                iso.std.iso._20022.tech.xsd.pacs_028_001.Document respObj = (iso.std.iso._20022.tech.xsd.pacs_028_001.Document) jaxbUnmarshaller.unmarshal(reader);
-
-                resp.getWriter().print(Common.getPrettyGson().toJson(respObj));
-            } catch (JAXBException e) {
-                e.printStackTrace();
+            else if(reqStr.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03\">")) {
+                jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.pacs_028_001.Document.class);
+                jaxbUnmarshaller = jc.createUnmarshaller();
+                respObj = (iso.std.iso._20022.tech.xsd.pacs_028_001.Document) jaxbUnmarshaller.unmarshal(reader);
             }
-        }
-        else {
+            else {
+                resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                return;
+            }
+
+            resp.setContentType("application/json");
+            resp.setStatus(HttpServletResponse.SC_OK);
+            resp.getWriter().print(Common.getPrettyGson().toJson(respObj));
+        } catch (JAXBException e) {
+            e.printStackTrace();
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("Bad request", null)));
             return;
         }
-
     }
 
     @Override
@@ -76,9 +70,6 @@ public class MainServlet extends HttpServlet
         response.setStatus(HttpServletResponse.SC_OK);
         Answer answer = new Answer("OK", null);
         String str = Common.getPrettyGson().toJson(answer);
-        log.error("Json:{}", str);
         response.getWriter().println(str);
     }
-
-
 }
