@@ -19,9 +19,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.util.JAXBSource;
 import java.io.IOException;
 import java.io.StringReader;
-
 
 public class MainServlet extends HttpServlet
 {
@@ -37,20 +37,45 @@ public class MainServlet extends HttpServlet
             resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("BEEEE", null)));
             return;
         }
-        resp.setContentType("text/xml");
-        resp.setStatus(HttpServletResponse.SC_OK);
-        try {
-            Gson gson = new Gson();
-            JAXBContext jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.admi_002_001.Document.class);
-            Unmarshaller jaxbUnmarshaller = jc.createUnmarshaller();
+        if(reqStr.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:admi.002.001.01\">"))
+        {
+            resp.setContentType("text/xml");
+            resp.setStatus(HttpServletResponse.SC_OK);
+            try {
+                Gson gson = new Gson();
+                JAXBContext jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.admi_002_001.Document.class);
+                Unmarshaller jaxbUnmarshaller = jc.createUnmarshaller();
 
-            StringReader reader = new StringReader(reqStr);
-            iso.std.iso._20022.tech.xsd.admi_002_001.Document o = (Document) jaxbUnmarshaller.unmarshal(reader);
+                StringReader reader = new StringReader(reqStr);
+                iso.std.iso._20022.tech.xsd.admi_002_001.Document respObj = (Document) jaxbUnmarshaller.unmarshal(reader);
 
-            resp.getWriter().println(Common.getPrettyGson().toJson(o));
-        } catch (JAXBException e) {
-            e.printStackTrace();
+                resp.getWriter().print(Common.getPrettyGson().toJson(respObj));
+            } catch (JAXBException e) {
+                e.printStackTrace();
+            }
         }
+        else if(reqStr.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03\">")) {
+            resp.setContentType("text/xml");
+            resp.setStatus(HttpServletResponse.SC_OK);
+            try {
+                JAXBContext jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.pacs_028_001.Document.class);
+                Unmarshaller jaxbUnmarshaller = jc.createUnmarshaller();
+
+                StringReader reader = new StringReader(reqStr);
+                iso.std.iso._20022.tech.xsd.pacs_028_001.Document respObj = (iso.std.iso._20022.tech.xsd.pacs_028_001.Document) jaxbUnmarshaller.unmarshal(reader);
+
+                resp.getWriter().print(Common.getPrettyGson().toJson(respObj));
+            } catch (JAXBException e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            resp.setContentType("application/json");
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("Bad request", null)));
+            return;
+        }
+
     }
 
     @Override
