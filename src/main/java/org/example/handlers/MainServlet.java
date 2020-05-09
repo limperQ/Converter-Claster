@@ -30,19 +30,11 @@ public class MainServlet extends HttpServlet
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
         String reqStr = IOUtils.toString(req.getInputStream());
-        if(StringUtils.isBlank(reqStr))
-        {
-            resp.setContentType("application/json");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("BEEEE", null)));
-            return;
-        }
+        resp.setContentType("application/json");
         if(reqStr.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:admi.002.001.01\">"))
         {
-            resp.setContentType("text/xml");
             resp.setStatus(HttpServletResponse.SC_OK);
             try {
-                Gson gson = new Gson();
                 JAXBContext jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.admi_002_001.Document.class);
                 Unmarshaller jaxbUnmarshaller = jc.createUnmarshaller();
 
@@ -51,11 +43,11 @@ public class MainServlet extends HttpServlet
 
                 resp.getWriter().print(Common.getPrettyGson().toJson(respObj));
             } catch (JAXBException e) {
+
                 e.printStackTrace();
             }
         }
         else if(reqStr.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03\">")) {
-            resp.setContentType("text/xml");
             resp.setStatus(HttpServletResponse.SC_OK);
             try {
                 JAXBContext jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.pacs_028_001.Document.class);
@@ -70,7 +62,6 @@ public class MainServlet extends HttpServlet
             }
         }
         else {
-            resp.setContentType("application/json");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("Bad request", null)));
             return;

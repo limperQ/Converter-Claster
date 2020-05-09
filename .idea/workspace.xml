@@ -2,56 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2afc9e2f-2269-4233-89ea-5e3fef4d4a19" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerExample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ServerExample.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.props" beforeDir="false" afterPath="$PROJECT_DIR$/main.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/handlers/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/xsd/gcc/admi.002.001.01.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xsd/gcc/admi.002.001.01.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/xsd/gcc/pacs.028.001.03.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/xsd/gcc/pacs.028.001.03.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/handlers/MainServletTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/handlers/MainServletTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/admi.002.001.01.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/admi.002.001.01.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/pacs.028.001.03.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/pacs.028.001.03.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/sun-jaxb.episode" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/iso/std/iso/_20022/tech/xsd/admi_002_001/MessageReference1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iso/std/iso/_20022/tech/xsd/admi_002_001/MessageReference1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/iso/std/iso/_20022/tech/xsd/admi_002_001/MessageRejectV01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iso/std/iso/_20022/tech/xsd/admi_002_001/MessageRejectV01.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/iso/std/iso/_20022/tech/xsd/admi_002_001/RejectionReason21.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iso/std/iso/_20022/tech/xsd/admi_002_001/RejectionReason21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/iso/std/iso/_20022/tech/xsd/pacs_028_001/GroupHeader911.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iso/std/iso/_20022/tech/xsd/pacs_028_001/GroupHeader911.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/iso/std/iso/_20022/tech/xsd/pacs_028_001/OriginalTransactionReference281.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iso/std/iso/_20022/tech/xsd/pacs_028_001/OriginalTransactionReference281.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/handlers/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/handlers/MainServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Answer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Answer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/utils/Common.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/utils/Common.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/utils/PropertyManager$PropertyNotFindException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/utils/PropertyManager$PropertyNotFindException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/utils/PropertyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/utils/PropertyManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/xsd/gcc/admi.002.001.01.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xsd/gcc/admi.002.001.01.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/xsd/gcc/pacs.028.001.03.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xsd/gcc/pacs.028.001.03.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/META-INF/JAXB/episode_xjc_1.xjb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/MessageReference1.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/MessageReference1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/MessageRejectV01.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/MessageRejectV01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/ObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/RejectionReason21.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/RejectionReason21.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/admi_002_001/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/BranchAndFinancialInstitutionIdentification61.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/BranchAndFinancialInstitutionIdentification61.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/ClearingSystemMemberIdentification21.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/ClearingSystemMemberIdentification21.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/FIToFIPaymentStatusRequestV03.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/FIToFIPaymentStatusRequestV03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/FinancialInstitutionIdentification181.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/FinancialInstitutionIdentification181.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/GroupHeader911.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/GroupHeader911.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/ObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/OriginalGroupInformation271.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/OriginalGroupInformation271.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/OriginalTransactionReference281.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/OriginalTransactionReference281.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/PaymentTransaction1131.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/PaymentTransaction1131.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/jaxb/iso/std/iso/_20022/tech/xsd/pacs_028_001/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/handlers/MainServletTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/handlers/MainServletTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +45,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -105,7 +60,7 @@
       <recent name="C:\Programmes_programming\ServerExample-master\src\main\resources\xsd\gcc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MainServletTest.doPost">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="ServerExample" />
@@ -168,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MainServletTest.doPost" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestDoc.testDoc" />
         <item itemvalue="JUnit.MainServletTest" />
       </list>
@@ -186,7 +141,19 @@
       <option name="presentableId" value="Default" />
       <updated>1588626091339</updated>
     </task>
+    <task id="LOCAL-00001" summary="Добавил автоматический выбор варианта документа">
+      <created>1589022349077</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589022349077</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Добавил автоматический выбор варианта документа" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил автоматический выбор варианта документа" />
   </component>
   <component name="WindowStateProjectService">
     <state x="551" y="177" key="#Project_Structure" timestamp="1588940483247">
@@ -205,50 +172,58 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="764" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588631017536" />
-    <state x="599" y="112" key="CommitChangelistDialog2" timestamp="1589022327582">
+    <state x="599" y="112" key="CommitChangelistDialog2" timestamp="1589022347983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="599" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589022327582" />
+    <state x="599" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589022347983" />
     <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1588957597244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588957597244" />
-    <state width="1875" height="281" key="GridCell.Tab.0.bottom" timestamp="1589020603479">
+    <state width="1875" height="281" key="GridCell.Tab.0.bottom" timestamp="1589027757978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589020603479" />
-    <state width="1875" height="281" key="GridCell.Tab.0.center" timestamp="1589020603479">
+    <state width="1875" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589027757978" />
+    <state width="1875" height="281" key="GridCell.Tab.0.center" timestamp="1589027757978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589020603479" />
-    <state width="1875" height="281" key="GridCell.Tab.0.left" timestamp="1589020603478">
+    <state width="1875" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589027757978" />
+    <state width="1875" height="281" key="GridCell.Tab.0.left" timestamp="1589027757977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589020603478" />
-    <state width="1875" height="281" key="GridCell.Tab.0.right" timestamp="1589020603479">
+    <state width="1875" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589027757977" />
+    <state width="1875" height="281" key="GridCell.Tab.0.right" timestamp="1589027757978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589020603479" />
-    <state width="1875" height="347" key="GridCell.Tab.1.bottom" timestamp="1589019586572">
+    <state width="1875" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589027757978" />
+    <state width="1875" height="347" key="GridCell.Tab.1.bottom" timestamp="1589022865260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589019586572" />
-    <state width="1875" height="347" key="GridCell.Tab.1.center" timestamp="1589019586572">
+    <state width="1875" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589022865260" />
+    <state width="1875" height="347" key="GridCell.Tab.1.center" timestamp="1589022865260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589019586572" />
-    <state width="1875" height="347" key="GridCell.Tab.1.left" timestamp="1589019586572">
+    <state width="1875" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589022865260" />
+    <state width="1875" height="347" key="GridCell.Tab.1.left" timestamp="1589022865260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589019586572" />
-    <state width="1875" height="347" key="GridCell.Tab.1.right" timestamp="1589019586572">
+    <state width="1875" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589022865260" />
+    <state width="1875" height="347" key="GridCell.Tab.1.right" timestamp="1589022865260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589019586572" />
+    <state width="1875" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589022865260" />
     <state x="489" y="174" key="Maven.ArtifactSearchDialog" timestamp="1588628815052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="489" y="174" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588628815052" />
+    <state x="460" y="161" key="SettingsEditor" timestamp="1589022970422">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="460" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589022970422" />
+    <state x="551" y="252" key="Vcs.Push.Dialog.v2" timestamp="1589022375052">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589022375052" />
     <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1589012459432">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -272,11 +247,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/handlers/MainServlet.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
