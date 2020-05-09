@@ -56,15 +56,14 @@ public class    Main
     }
 
     private static void runServer() {
-        int port = PropertyManager.getPropertyAsInteger("serverTransport.port", 8027);
-        int port2 = PropertyManager.getPropertyAsInteger("serverConverter1.port", 8028);
-        int port3 = PropertyManager.getPropertyAsInteger("serverConverter2.port", 8029);
-
-        String contextStr = PropertyManager.getPropertyAsString("server.context", "server");
-
-        runServer(port, contextStr);
-        //runServer(port2, contextStr);
-        runServer(port3, contextStr);
+        String contextStr;
+        int port;
+        String[] adresses = PropertyManager.getPropertyAsString("addresses", null).split(";");
+        for (int i = 0;i < adresses.length; ++i){
+            contextStr = adresses[i].split(":")[0] + adresses[i].split(":")[1];
+            port = Integer.parseInt(adresses[i].split(":")[2], 10);
+            runServer(port, contextStr);
+        }
     }
 
     public static void stopServer() {

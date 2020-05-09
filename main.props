@@ -1,6 +1,4 @@
-serverTransport.port = 8027
-serverConverter1.port = 8028
-serverConverter2.port = 8029
+addresses = http://localhost:8888;http://localhost:8889;http://localhost:8890
 server.context = /
 
 log4j.rootLogger= TRACE, stdout, file

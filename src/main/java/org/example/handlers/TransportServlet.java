@@ -90,21 +90,12 @@ public class TransportServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect(req.getRequestURL().toString() + "/convert");
-        if (resp.getStatus() == HttpServletResponse.SC_OK) {
-            log.error("HttpMethod: GET. Server: " + req.getRequestURL().toString() + ". Status: OK");
-        } else {
-            log.error("HttpMethod: GET. Server: " + req.getRequestURL().toString() + ". Status: Bad request");
-        }
+        resp.sendRedirect(req.getRequestURL().toString() + "convert");
     }
 
     public String getServerUrl() {
-        String redirectingPath = "http://localhost:";
-        switch(requestCounter % serverCounter) {
-            case (0): redirectingPath += PropertyManager.getPropertyAsInteger("serverTransport.port", 8027).toString(); break;
-            case (1): redirectingPath += PropertyManager.getPropertyAsInteger("serverConverter1.port", 8028).toString(); break;
-            case (2): redirectingPath += PropertyManager.getPropertyAsInteger("serverConverter2.port", 8029).toString(); break;
-        }
+        String[] adresses = PropertyManager.getPropertyAsString("addresses", null).split(";");
+        String redirectingPath = adresses[requestCounter % serverCounter];
         redirectingPath += "/convert";
         return redirectingPath;
     }
