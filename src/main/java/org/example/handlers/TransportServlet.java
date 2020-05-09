@@ -26,6 +26,7 @@ import java.io.IOException;
 
 @WebServlet("/")
 public class TransportServlet extends HttpServlet {
+    private static int tryCounter = 0;
     private static int requestCounter = 0;
     private static int serverCounter = 3;
     private static Logger log = LoggerFactory.getLogger(TransportServlet.class.getSimpleName());
@@ -44,28 +45,32 @@ public class TransportServlet extends HttpServlet {
         String redirectingPath = getServerUrl();
 
         HttpResponse response = null;
+        HttpClient client;
+        HttpPost request;
+        StringEntity entity;
 
         boolean isFault = false;
         do {
             try {
-                HttpClient client = HttpClientBuilder.create().build();
-                HttpPost request = new HttpPost(redirectingPath);
-                StringEntity entity = new StringEntity(reqStr);
+                client = HttpClientBuilder.create().build();
+                request = new HttpPost(redirectingPath);
+                entity = new StringEntity(reqStr);
                 request.setEntity(entity);
 
                 response = client.execute(request);
                 isFault = false;
+                tryCounter = 0;
             } catch (HttpHostConnectException e) {
                 redirectingPath = changeServer();
                 isFault = true;
+                ++tryCounter;
             }
-        } while (isFault);
+        } while (isFault && tryCounter < serverCounter);
 
         if(response.getStatusLine().getStatusCode() != HttpServletResponse.SC_OK) {
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("Bad request", null)));
             log.error("HttpMethod: POST. Server: " + redirectingPath + ". Status: Bad request");
-            return;
         }
 
         HttpEntity convertedResponse = response.getEntity();
@@ -85,10 +90,12 @@ public class TransportServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String redirectingPath = getServerUrl();
-        resp.sendRedirect(redirectingPath);
-        ++requestCounter;
-        log.error("HttpMethod: GET. Server: " + redirectingPath + ". Status: OK");
+        resp.sendRedirect(req.getRequestURL().toString() + "/convert");
+        if (resp.getStatus() == HttpServletResponse.SC_OK) {
+            log.error("HttpMethod: GET. Server: " + req.getRequestURL().toString() + ". Status: OK");
+        } else {
+            log.error("HttpMethod: GET. Server: " + req.getRequestURL().toString() + ". Status: Bad request");
+        }
     }
 
     public String getServerUrl() {
