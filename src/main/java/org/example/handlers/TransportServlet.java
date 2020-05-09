@@ -9,6 +9,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.example.crypto.AesCipher;
 import org.example.model.Answer;
 import org.example.model.ConvertResponse;
 import org.example.model.Item;
@@ -30,12 +31,14 @@ public class TransportServlet extends HttpServlet {
     private static int requestCounter = 0;
     private static int serverCounter = 3;
     private static Logger log = LoggerFactory.getLogger(TransportServlet.class.getSimpleName());
-
+    static final String secretKey = "BeGvWqgrVd42hfeH";
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String reqStr = IOUtils.toString(req.getInputStream());
+        String decryptedStr = AesCipher.decrypt(secretKey, reqStr);
+        Boolean isEncrypted = decryptedStr != null;
 
-        if (StringUtils.isBlank(reqStr)) {
+        if (StringUtils.isBlank(isEncrypted ? decryptedStr : reqStr)) {
             resp.setContentType("application/json");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("BEEEE", null)));
@@ -54,7 +57,7 @@ public class TransportServlet extends HttpServlet {
             try {
                 client = HttpClientBuilder.create().build();
                 request = new HttpPost(redirectingPath);
-                entity = new StringEntity(reqStr);
+                entity = new StringEntity(isEncrypted ? decryptedStr : reqStr);
                 request.setEntity(entity);
 
                 response = client.execute(request);
@@ -75,10 +78,12 @@ public class TransportServlet extends HttpServlet {
 
         HttpEntity convertedResponse = response.getEntity();
         String convertedResponseStr = IOUtils.toString(convertedResponse.getContent());
+        String encryptedStr = AesCipher.encrypt(secretKey, convertedResponseStr);
 
-        resp.setContentType("application/json");
+        resp.setContentType(isEncrypted ? "text/text" : "application/json");
         resp.setStatus(HttpServletResponse.SC_OK);
-        resp.getWriter().print(convertedResponseStr);
+
+        resp.getWriter().print(isEncrypted ? encryptedStr : convertedResponseStr);
         log.error("HttpMethod: POST. Server: " + redirectingPath + ". Status: OK");
         ++requestCounter;
     }
