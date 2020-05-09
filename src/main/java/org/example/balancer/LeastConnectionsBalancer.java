@@ -4,33 +4,30 @@ import org.example.utils.PropertyManager;
 
 public class LeastConnectionsBalancer implements IBalancer {
     private int serverCounter;
-    private int requestCounter;
+    private int currentIndex;
     private int[] activeRequestCounters;
-    public int getRequestCounter() { return requestCounter; }
     public int getServerCounter() { return serverCounter; }
 
     public LeastConnectionsBalancer() {
         serverCounter = PropertyManager.getPropertyAsString("addresses", null).split(";").length;
-        requestCounter = 0;
         activeRequestCounters = new int[serverCounter];
     }
     public String getServerUrl() {
-        int min = activeRequestCounters[0], minIndex = 0;
+        int min = activeRequestCounters[0];
         for (int i = 0; i < activeRequestCounters.length; ++i) {
             if (activeRequestCounters[i] < min){
                 min = activeRequestCounters[i];
-                minIndex = i;
+                currentIndex = i;
             }
         }
 
         String[] addresses = PropertyManager.getPropertyAsString("addresses", null).split(";");
-        ++activeRequestCounters[minIndex];
-        String redirectingPath = addresses[minIndex];
+        String redirectingPath = addresses[currentIndex];
         redirectingPath += "/convert";
         return redirectingPath;
     }
     public void incrementRequestCounter() {
-        ++requestCounter;
+        ++activeRequestCounters[currentIndex];
     }
 
 }
