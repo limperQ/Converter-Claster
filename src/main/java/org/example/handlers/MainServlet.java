@@ -1,14 +1,8 @@
 package org.example.handlers;
 
-import com.google.gson.Gson;
-import iso.std.iso._20022.tech.xsd.admi_002_001.Document;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.example.model.Answer;
-import org.example.model.Item;
-import org.example.model.Request;
 import org.example.utils.Common;
-import org.example.utils.TextReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.util.JAXBSource;
 import java.io.IOException;
 import java.io.StringReader;
 @WebServlet("/convert")
@@ -49,6 +42,7 @@ public class MainServlet extends HttpServlet
                 respObj = (iso.std.iso._20022.tech.xsd.pacs_028_001.Document) jaxbUnmarshaller.unmarshal(reader);
             }
             else {
+                resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
                 return;
             }

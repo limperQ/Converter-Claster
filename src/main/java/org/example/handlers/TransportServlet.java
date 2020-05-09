@@ -9,9 +9,8 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.example.crypto.AesCipher;
 import org.example.model.Answer;
-import org.example.model.ConvertResponse;
-import org.example.model.Item;
 import org.example.utils.Common;
 import org.example.utils.PropertyManager;
 import org.slf4j.Logger;
@@ -29,12 +28,14 @@ public class TransportServlet extends HttpServlet {
     private static int requestCounter = 0;
     private static int serverCounter = 3;
     private static Logger log = LoggerFactory.getLogger(TransportServlet.class.getSimpleName());
+    static final String secretKey = "BeGvWqgrVd42hfeH";
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String reqStr = IOUtils.toString(req.getInputStream());
+        String decryptedStr = AesCipher.decrypt(secretKey, reqStr);
 
-        if (StringUtils.isBlank(reqStr)) {
+        if (StringUtils.isBlank(decryptedStr)) {
             resp.setContentType("application/json");
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("BEEEE", null)));
@@ -42,12 +43,12 @@ public class TransportServlet extends HttpServlet {
         }
 
         String redirectingPath = getServerUrl();
-        redirectingPath += "/convert";
         ++requestCounter;
 
         HttpClient client = HttpClientBuilder.create().build();
         HttpPost request = new HttpPost(redirectingPath);
-        StringEntity entity = new StringEntity(reqStr);
+        StringEntity entity = new StringEntity(decryptedStr);
+
         HttpResponse response = null;
         request.setEntity(entity);
         try {
@@ -65,10 +66,11 @@ public class TransportServlet extends HttpServlet {
 
         HttpEntity convertedResponse = response.getEntity();
         String convertedResponseStr = IOUtils.toString(convertedResponse.getContent());
+        String cryptoStr = AesCipher.encrypt(secretKey, convertedResponseStr);
 
-        resp.setContentType("application/json");
+        resp.setContentType("text/text");
         resp.setStatus(HttpServletResponse.SC_OK);
-        resp.getWriter().print(convertedResponseStr);
+        resp.getWriter().print(cryptoStr);
         log.error("HttpMethod: POST. Server: " + redirectingPath);
     }
 

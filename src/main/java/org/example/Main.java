@@ -63,7 +63,7 @@ public class    Main
         String contextStr = PropertyManager.getPropertyAsString("server.context", "server");
 
         runServer(port, contextStr);
-        //runServer(port2, contextStr);
+        runServer(port2, contextStr);
         runServer(port3, contextStr);
     }
 

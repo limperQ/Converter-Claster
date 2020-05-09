@@ -1,12 +1,12 @@
 <Document xmlns="urn:iso:std:iso:20022:tech:xsd:admi.002.001.01">
-    <admi.002.001.01>
-        <RltdRef>
-            <Ref>GUBMAG1911140022S</Ref>
-        </RltdRef>
-        <Rsn>
-            <RjctgPtyRsn>EA107</RjctgPtyRsn>
-            <RjctnDtTm>2019-11-14T18:35:31</RjctnDtTm>
-            <RsnDesc>Incoming message was not recognized or document has got wrong structure</RsnDesc>
-        </Rsn>
-    </admi.002.001.01>
+<admi.002.001.01>
+    <RltdRef>
+        <Ref>GUBMAG1911140022S</Ref>
+    </RltdRef>
+    <Rsn>
+        <RjctgPtyRsn>EA107</RjctgPtyRsn>
+        <RjctnDtTm>2019-11-14T18:35:31</RjctnDtTm>
+        <RsnDesc>Incoming message was not recognized or document has got wrong structure</RsnDesc>
+    </Rsn>
+</admi.002.001.01>
 </Document>
