@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2afc9e2f-2269-4233-89ea-5e3fef4d4a19" name="Default Changelist" comment="" />
+    <list default="true" id="2afc9e2f-2269-4233-89ea-5e3fef4d4a19" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/handlers/MainServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/handlers/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/handlers/MainServlet.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,20 +15,52 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1bSWh6Wo4YCHwkf3Un8M7A8XfKj" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.utils" />
+      <recent name="org.example.handlers" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="groovy.util.GroovyTestCase" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Programmes_programming\ServerExample-master\src\main\resources\xsd\gcc" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MainServletTest.doPost">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="ServerExample" />
@@ -37,9 +74,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainServletTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ServerExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.handlers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.handlers" />
+      <option name="MAIN_CLASS_NAME" value="org.example.handlers.MainServletTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainServletTest.doPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ServerExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.handlers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.handlers" />
+      <option name="MAIN_CLASS_NAME" value="org.example.handlers.MainServletTest" />
+      <option name="METHOD_NAME" value="doPost" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDoc.testDoc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ServerExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.TestDoc" />
+      <option name="METHOD_NAME" value="testDoc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainServletTest.doPost" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestDoc.testDoc" />
+        <item itemvalue="JUnit.MainServletTest" />
       </list>
     </recent_temporary>
   </component>
@@ -54,40 +141,114 @@
       <option name="presentableId" value="Default" />
       <updated>1588626091339</updated>
     </task>
+    <task id="LOCAL-00001" summary="Добавил автоматический выбор варианта документа">
+      <created>1589022349077</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589022349077</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Добавил автоматический выбор варианта документа" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил автоматический выбор варианта документа" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="551" y="177" key="#Project_Structure" timestamp="1588940483247">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="177" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1588940483247" />
+    <state x="689" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1588953127281">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588953127281" />
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589018573414">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589018573414" />
     <state x="764" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1588631017536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="764" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588631017536" />
-    <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1588626108728">
+    <state x="599" y="112" key="CommitChangelistDialog2" timestamp="1589022347983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588626108728" />
-    <state width="1875" height="281" key="GridCell.Tab.0.bottom" timestamp="1588631689216">
+    <state x="599" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589022347983" />
+    <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1588957597244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588631689216" />
-    <state width="1875" height="281" key="GridCell.Tab.0.center" timestamp="1588631689216">
+    <state x="739" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588957597244" />
+    <state width="1875" height="281" key="GridCell.Tab.0.bottom" timestamp="1589027757978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588631689216" />
-    <state width="1875" height="281" key="GridCell.Tab.0.left" timestamp="1588631689215">
+    <state width="1875" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589027757978" />
+    <state width="1875" height="281" key="GridCell.Tab.0.center" timestamp="1589027757978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588631689215" />
-    <state width="1875" height="281" key="GridCell.Tab.0.right" timestamp="1588631689216">
+    <state width="1875" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589027757978" />
+    <state width="1875" height="281" key="GridCell.Tab.0.left" timestamp="1589027757977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588631689216" />
+    <state width="1875" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589027757977" />
+    <state width="1875" height="281" key="GridCell.Tab.0.right" timestamp="1589027757978">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589027757978" />
+    <state width="1875" height="347" key="GridCell.Tab.1.bottom" timestamp="1589022865260">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589022865260" />
+    <state width="1875" height="347" key="GridCell.Tab.1.center" timestamp="1589022865260">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589022865260" />
+    <state width="1875" height="347" key="GridCell.Tab.1.left" timestamp="1589022865260">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589022865260" />
+    <state width="1875" height="347" key="GridCell.Tab.1.right" timestamp="1589022865260">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589022865260" />
     <state x="489" y="174" key="Maven.ArtifactSearchDialog" timestamp="1588628815052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="489" y="174" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588628815052" />
-    <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1588626098577">
+    <state x="460" y="161" key="SettingsEditor" timestamp="1589022970422">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588626098577" />
+    <state x="460" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589022970422" />
+    <state x="551" y="252" key="Vcs.Push.Dialog.v2" timestamp="1589022375052">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589022375052" />
+    <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1589012459432">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589012459432" />
+    <state x="730" y="221" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589016808460">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="730" y="221" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589016808460" />
+    <state x="616" y="173" width="670" height="676" key="search.everywhere.popup" timestamp="1588956521981">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="670" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588956521981" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/TestDoc.java</url>
+          <line>15</line>
+          <properties class="org.example.TestDoc" method="testDoc">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
