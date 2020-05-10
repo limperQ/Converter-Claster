@@ -6,10 +6,13 @@ public class LeastConnectionsBalancer implements IBalancer {
     private int serverCounter;
     private int currentIndex;
     private int[] activeRequestCounters;
+    private String[] addresses;
+
     public int getServerCounter() { return serverCounter; }
 
     public LeastConnectionsBalancer() {
-        serverCounter = PropertyManager.getPropertyAsString("addresses", null).split(";").length;
+        addresses = PropertyManager.getPropertyAsString("addresses", null).split(";");
+        serverCounter = addresses.length;
         activeRequestCounters = new int[serverCounter];
     }
     public String getServerUrl() {
@@ -21,7 +24,6 @@ public class LeastConnectionsBalancer implements IBalancer {
             }
         }
 
-        String[] addresses = PropertyManager.getPropertyAsString("addresses", null).split(";");
         String redirectingPath = addresses[currentIndex];
         redirectingPath += "/convert";
         return redirectingPath;
