@@ -114,8 +114,7 @@ public class TransportServlet extends HttpServlet {
                 String str = request.getURI().toString();
                 if (PropertyManager.getPropertyAsBoolean("onlyTransport", null) &&
                         (transportPath + "convert").equals(request.getURI().toString())) {
-                    redirectingPath = changeServer();
-                    isFault = true;
+                    isFault = prepateToRetry();
                 } else {
                     response = client.execute(request);
                     balancer.incrementRequestCounter();
@@ -123,9 +122,7 @@ public class TransportServlet extends HttpServlet {
                     tryCounter = 0;
                 }
             } catch (HttpHostConnectException e) {
-                redirectingPath = changeServer();
-                isFault = true;
-                ++tryCounter;
+                isFault = prepateToRetry();
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             } catch (ClientProtocolException e) {
@@ -135,6 +132,11 @@ public class TransportServlet extends HttpServlet {
             }
         } while (isFault && tryCounter < serverCounter);
         return response;
+    }
+    boolean prepateToRetry(){
+        redirectingPath = changeServer();
+        ++tryCounter;
+        return true;
     }
 
     public String changeServer() {
