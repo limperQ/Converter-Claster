@@ -1,12 +1,14 @@
-addresses = http://localhost:8888;http://localhost:8889;http://localhost:8890   
+addresses = http://localhost:8888;http://localhost:8889;http://localhost:8890;http://localhost:8891;http://localhost:8892;http://localhost:8893;
 
----"RoundRobin" or "LeastConnections" or "WeightedRoundRobin"---
-balanceMethod = RoundRobin
+//  "RoundRobin" or "LeastConnections" or "WeightedRoundRobin"---
+balanceMethod = WeightedRoundRobin
 
----If set "true" transport server (proxy) only redirects POST requests---
+//  If set "true" transport server (proxy) only redirects POST requests---
 onlyTransport=true
 
----Key for encryption---
+healthCheckPeriod=5000
+
+//  Key for encryption---
 secretKey = BeGvWqgrVd42hfeH
 
 log4j.rootLogger= TRACE, stdout, file

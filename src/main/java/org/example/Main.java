@@ -1,5 +1,9 @@
 package org.example;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHandler;
@@ -10,25 +14,75 @@ import org.example.utils.PropertyManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class    Main
 {
     private static Logger log = LoggerFactory.getLogger(Main.class.getSimpleName());
-
+    private static String[] addresses;
     private static Server server;
 
     public static void main(String[] args) throws Exception
     {
         PropertyManager.load();
         Common.configure();
+
+        addresses = PropertyManager.getPropertyAsString("addresses", null).split(";");
+
         runServer();
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
-
                 stopServer();
-
             }
         },"Stop Jetty Hook"));
+
+        Thread healthCheck = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(true){
+                        ArrayList<Integer> serverIndex = null;
+
+                    try {
+                        serverIndex = checkServers();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    if (serverIndex.size() > 0) {
+                            for (int index : serverIndex) {
+                                String contextStr = addresses[index].split(":")[0] + addresses[index].split(":")[1];
+                                int port = Integer.parseInt(addresses[index].split(":")[2], 10);
+                                runServer(port, contextStr);
+                            }
+                        }
+                    try {
+                        Thread.sleep(PropertyManager.getPropertyAsInteger("healthCheckPeriod", 5000));
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        healthCheck.start();
+    }
+
+    public static ArrayList<Integer> checkServers() throws IOException {
+        ArrayList<Integer> downServerIndexes = new ArrayList<Integer>();
+        for (int i = 0; i < addresses.length; ++i) {
+            String url = addresses[i];
+            HttpClient client = HttpClientBuilder.create().build();
+            HttpGet request = new HttpGet(url);
+
+            HttpResponse response = client.execute(request);
+            if (response.getStatusLine().getStatusCode() != HttpServletResponse.SC_OK) {
+                downServerIndexes.add(i);
+            }
+        }
+        return downServerIndexes;
     }
 
     public static void runServer(int port, String contextStr)
@@ -58,10 +112,10 @@ public class    Main
     private static void runServer() {
         String contextStr;
         int port;
-        String[] adresses = PropertyManager.getPropertyAsString("addresses", null).split(";");
-        for (int i = 0;i < adresses.length; ++i){
-            contextStr = adresses[i].split(":")[0] + adresses[i].split(":")[1];
-            port = Integer.parseInt(adresses[i].split(":")[2], 10);
+
+        for (int i = 0; i < addresses.length / 3; ++i){
+            contextStr = addresses[i].split(":")[0] + addresses[i].split(":")[1];
+            port = Integer.parseInt(addresses[i].split(":")[2], 10);
             runServer(port, contextStr);
         }
     }
