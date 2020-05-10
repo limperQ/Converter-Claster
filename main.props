@@ -1,7 +1,7 @@
-addresses = http://localhost:8888;http://localhost:8889;http://localhost:8890
+addresses = http://localhost:8888;http://localhost:8889;http://localhost:8890   
 
 ---"RoundRobin" or "LeastConnections" or "WeightedRoundRobin"---
-balanceMethod = WeightedRoundRobin
+balanceMethod = RoundRobin
 
 ---If set "true" transport server (proxy) only redirects POST requests---
 onlyTransport=true
