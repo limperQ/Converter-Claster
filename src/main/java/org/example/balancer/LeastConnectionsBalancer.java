@@ -29,5 +29,7 @@ public class LeastConnectionsBalancer implements IBalancer {
     public void incrementRequestCounter() {
         ++activeRequestCounters[currentIndex];
     }
-
+    public void decrementRequestCounter() {
+        --activeRequestCounters[currentIndex];
+    }
 }

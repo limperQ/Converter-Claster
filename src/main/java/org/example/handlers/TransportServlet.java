@@ -76,6 +76,7 @@ public class TransportServlet extends HttpServlet {
                 request.setEntity(entity);
 
                 response = client.execute(request);
+                balancer.incrementRequestCounter();
                 isFault = false;
                 tryCounter = 0;
             } catch (HttpHostConnectException e) {
@@ -98,9 +99,11 @@ public class TransportServlet extends HttpServlet {
         resp.setContentType(isEncrypted ? "text/text" : "application/json");
         resp.setStatus(HttpServletResponse.SC_OK);
 
-        resp.getWriter().print(balancer.getServerUrl() + "\n" + (isEncrypted ? encryptedStr : convertedResponseStr));
+        resp.getWriter().print(redirectingPath + "\n" + (isEncrypted ? encryptedStr : convertedResponseStr));
         log.error("HttpMethod: POST. Server: " + redirectingPath + ". Status: OK");
-        balancer.incrementRequestCounter();
+        if (PropertyManager.getPropertyAsString("balanceMethod", null).equals("LeastConnections")){
+            balancer.decrementRequestCounter();
+        }
     }
 
     public String changeServer() {

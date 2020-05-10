@@ -22,4 +22,7 @@ public class RoundRobinBalancer implements IBalancer{
     public void incrementRequestCounter(){
         ++requestCounter;
     }
+    public void decrementRequestCounter(){
+        --requestCounter;
+    }
 }
