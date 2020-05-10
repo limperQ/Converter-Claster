@@ -31,8 +31,10 @@ import java.io.UnsupportedEncodingException;
 
 @WebServlet("/")
 public class TransportServlet extends HttpServlet {
+    private static String transportPath;
     private static Logger log = LoggerFactory.getLogger(TransportServlet.class.getSimpleName());
     private String balanceMethod;
+    private String redirectingPath;
     private static int tryCounter;
     private static int serverCounter;
     private IBalancer balancer;
@@ -54,6 +56,7 @@ public class TransportServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        transportPath = req.getRequestURL().toString();
         String reqStr = IOUtils.toString(req.getInputStream());
         String decryptedStr = AesCipher.decrypt(secretKey, reqStr);
         Boolean isEncrypted = decryptedStr != null;
@@ -67,14 +70,9 @@ public class TransportServlet extends HttpServlet {
             resp.getWriter().println(Common.getPrettyGson().toJson(new Answer("Empty body", null)));
             return;
         }
-        String str = req.getRemoteUser();
-        String str1 = req.getRemoteAddr();
-        String str2 = req.getRemoteHost();
-        int str3 = req.getRemotePort();
 
-        String redirectingPath = balancer.getServerUrl();
-
-        HttpResponse response = sendRequest(redirectingPath, reqStr);
+        redirectingPath = balancer.getServerUrl();
+        HttpResponse response = sendRequest(reqStr);
 
         if (response.getStatusLine().getStatusCode() != HttpServletResponse.SC_OK) {
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
@@ -99,7 +97,7 @@ public class TransportServlet extends HttpServlet {
         }
     }
 
-    public HttpResponse sendRequest(String path, String reqStr){
+    public HttpResponse sendRequest(String reqStr){
         HttpResponse response = null;
         HttpClient client;
         HttpPost request;
@@ -109,16 +107,23 @@ public class TransportServlet extends HttpServlet {
         do {
             try {
                 client = HttpClientBuilder.create().build();
-                request = new HttpPost(path);
+                request = new HttpPost(redirectingPath);
                 entity = new StringEntity(reqStr);
                 request.setEntity(entity);
 
-                response = client.execute(request);
-                balancer.incrementRequestCounter();
-                isFault = false;
-                tryCounter = 0;
+                String str = request.getURI().toString();
+                if (PropertyManager.getPropertyAsBoolean("onlyTransport", null) &&
+                        (transportPath + "convert").equals(request.getURI().toString())) {
+                    redirectingPath = changeServer();
+                    isFault = true;
+                } else {
+                    response = client.execute(request);
+                    balancer.incrementRequestCounter();
+                    isFault = false;
+                    tryCounter = 0;
+                }
             } catch (HttpHostConnectException e) {
-                path = changeServer();
+                redirectingPath = changeServer();
                 isFault = true;
                 ++tryCounter;
             } catch (UnsupportedEncodingException e) {
@@ -131,6 +136,7 @@ public class TransportServlet extends HttpServlet {
         } while (isFault && tryCounter < serverCounter);
         return response;
     }
+
     public String changeServer() {
         balancer.incrementRequestCounter();
         return balancer.getServerUrl();
