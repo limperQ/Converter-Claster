@@ -36,13 +36,14 @@ public class TransportServlet extends HttpServlet {
     private static int tryCounter;
     private static int serverCounter;
     private IBalancer balancer;
-    static final String secretKey = "BeGvWqgrVd42hfeH";
+    static String secretKey;
 
     @Override
     public void init(){
         balanceMethod = PropertyManager.getPropertyAsString("balanceMethod", null);
         serverCounter = PropertyManager.getPropertyAsString("addresses", null).split(";").length;
         tryCounter = 0;
+        secretKey = PropertyManager.getPropertyAsString("secretKey", null);
 
         switch (balanceMethod){
             case "RoundRobin": balancer = new RoundRobinBalancer(); break;
