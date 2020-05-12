@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.BindException;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -57,7 +58,12 @@ public class    Main
                             for (int index : serverIndex) {
                                 String contextStr = addresses[index].split(":")[0] + addresses[index].split(":")[1];
                                 int port = Integer.parseInt(addresses[index].split(":")[2], 10);
-                                runServer(port, contextStr);
+                                try {
+                                    runServer(port, contextStr);
+                                } catch (Exception ex) {
+                                    log.error("The server " + contextStr + ":" + port + " is already running");
+                                    continue;
+                                }
                             }
                         }
                     try {
@@ -119,7 +125,7 @@ public class    Main
         String contextStr;
         int port;
 
-        for (int i = 0; i < addresses.length / 3 * 2; ++i){
+        for (int i = 0; i < addresses.length; ++i){
             contextStr = addresses[i].split(":")[0] + addresses[i].split(":")[1];
             port = Integer.parseInt(addresses[i].split(":")[2], 10);
             runServer(port, contextStr);
