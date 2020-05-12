@@ -49,8 +49,8 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.rnk.mf.Main</mainClass>
-                            <packageName>com.rnk.mf</packageName>
+                            <mainClass>org.example.Main</mainClass>
+                            <packageName>org.example</packageName>
                         </manifest>
                     </archive>
                 </configuration>

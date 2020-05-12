@@ -90,7 +90,7 @@ public class TransportServlet extends HttpServlet {
         resp.setContentType(isEncrypted ? "text/text" : "application/json");
         resp.setStatus(HttpServletResponse.SC_OK);
 
-        resp.getWriter().print(redirectingPath + "\n" + (convertedResponseStr));
+        resp.getWriter().print(convertedResponseStr);
         log.error("HttpMethod: POST. Server: " + redirectingPath + ". Status: OK");
         if (PropertyManager.getPropertyAsString("balanceMethod", "LeastConnections").equals("LeastConnections")){
             balancer.decrementRequestCounter();
