@@ -3,6 +3,7 @@ package org.example;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -77,8 +78,13 @@ public class    Main
             HttpClient client = HttpClientBuilder.create().build();
             HttpGet request = new HttpGet(url);
 
-            HttpResponse response = client.execute(request);
-            if (response.getStatusLine().getStatusCode() != HttpServletResponse.SC_OK) {
+            try {
+                HttpResponse response = client.execute(request);
+                if (response.getStatusLine().getStatusCode() != HttpServletResponse.SC_OK) {
+                    downServerIndexes.add(i);
+                }
+            }
+            catch (HttpHostConnectException ex) {
                 downServerIndexes.add(i);
             }
         }
