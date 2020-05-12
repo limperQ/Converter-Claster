@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ServerExample:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2afc9e2f-2269-4233-89ea-5e3fef4d4a19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/handlers/TransportServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/ConvertResponse.java" afterDir="false" />
+    <list default="true" id="2afc9e2f-2269-4233-89ea-5e3fef4d4a19" name="Default Changelist" comment="Add AesCipherTest and update MainServletTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.props" beforeDir="false" afterPath="$PROJECT_DIR$/main.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/handlers/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/handlers/MainServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/handlers/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/handlers/MainServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Answer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Answer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/model/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/utils/Common.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/utils/Common.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/utils/PropertyManager$PropertyNotFindException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/utils/PropertyManager$PropertyNotFindException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/utils/PropertyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/utils/PropertyManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/utils/TextReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/utils/TextReader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +37,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -54,11 +50,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/org/example/utils" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.22643678" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="ServerExample" />
@@ -72,9 +73,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AesCipherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ServerExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.crypto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.crypto" />
+      <option name="MAIN_CLASS_NAME" value="org.example.crypto.AesCipherTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainServletTest.doPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ServerExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.handlers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.handlers" />
+      <option name="MAIN_CLASS_NAME" value="org.example.handlers.MainServletTest" />
+      <option name="METHOD_NAME" value="doPost" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MainServletTest.doPost" />
+        <item itemvalue="JUnit.AesCipherTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -90,33 +124,66 @@
       <option name="presentableId" value="Default" />
       <updated>1588626091339</updated>
     </task>
+    <task id="LOCAL-00001" summary="Health master">
+      <created>1589136232201</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589136232202</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Beta version">
+      <created>1589310031744</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589310031744</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add AesCipherTest and update MainServletTest" />
+    <MESSAGE value="Health master" />
+    <MESSAGE value="Beta version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beta version" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="551" y="177" key="#Project_Structure" timestamp="1589304547887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="177" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1589304547887" />
     <state x="764" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1589033402826">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="764" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589033402826" />
-    <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1588626108728">
+    <state x="689" y="302" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589306554051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588626108728" />
-    <state width="1875" height="347" key="GridCell.Tab.0.bottom" timestamp="1589035983014">
+    <state x="689" y="302" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589306554051" />
+    <state x="600" y="112" key="CommitChangelistDialog2" timestamp="1589310030650">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589035983014" />
-    <state width="1875" height="347" key="GridCell.Tab.0.center" timestamp="1589035983014">
+    <state x="600" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589310030650" />
+    <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1589306691380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589035983014" />
-    <state width="1875" height="347" key="GridCell.Tab.0.left" timestamp="1589035983014">
+    <state x="739" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589306691380" />
+    <state width="1875" height="334" key="GridCell.Tab.0.bottom" timestamp="1589310259461">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589035983014" />
-    <state width="1875" height="347" key="GridCell.Tab.0.right" timestamp="1589035983014">
+    <state width="1875" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589310259461" />
+    <state width="1875" height="334" key="GridCell.Tab.0.center" timestamp="1589310259461">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1875" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589035983014" />
+    <state width="1875" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589310259461" />
+    <state width="1875" height="334" key="GridCell.Tab.0.left" timestamp="1589310259461">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589310259461" />
+    <state width="1875" height="334" key="GridCell.Tab.0.right" timestamp="1589310259461">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1875" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589310259461" />
     <state width="1875" height="347" key="GridCell.Tab.1.bottom" timestamp="1589035983015">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -137,18 +204,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="489" y="174" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588628815052" />
+    <state x="439" y="93" width="1255" height="901" key="SettingsEditor" timestamp="1589306710299">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="439" y="93" width="1255" height="901" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589306710299" />
     <state x="681" y="261" width="540" height="524" key="StructurePopup" timestamp="1589033105337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1589033105337" />
-    <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1589028944764">
+    <state x="551" y="252" key="Vcs.Push.Dialog.v2" timestamp="1589310037890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589028944764" />
-    <state x="768" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589028817788">
+    <state x="551" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589310037890" />
+    <state x="655" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1589304096524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="768" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589028817788" />
+    <state x="655" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589304096524" />
+    <state x="768" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589309491456">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="768" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589309491456" />
     <state x="736" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589028870416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -163,17 +238,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/handlers/TransportServlet.java</url>
-          <line>58</line>
+          <line>61</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/handlers/TransportServlet.java</url>
-          <line>48</line>
+          <line>50</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/handlers/TransportServlet.java</url>
-          <line>47</line>
+          <line>49</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>

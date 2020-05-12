@@ -119,7 +119,7 @@ public class    Main
         String contextStr;
         int port;
 
-        for (int i = 0; i < addresses.length / 3; ++i){
+        for (int i = 0; i < addresses.length / 3 * 2; ++i){
             contextStr = addresses[i].split(":")[0] + addresses[i].split(":")[1];
             port = Integer.parseInt(addresses[i].split(":")[2], 10);
             runServer(port, contextStr);
