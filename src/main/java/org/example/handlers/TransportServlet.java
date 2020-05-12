@@ -42,10 +42,10 @@ public class TransportServlet extends HttpServlet {
 
     @Override
     public void init(){
-        balanceMethod = PropertyManager.getPropertyAsString("balanceMethod", null);
-        serverCounter = PropertyManager.getPropertyAsString("addresses", null).split(";").length;
+        balanceMethod = PropertyManager.getPropertyAsString("balanceMethod", "RoundRobin");
+        serverCounter = PropertyManager.getPropertyAsString("addresses", "localhost:8888").split(";").length;
         tryCounter = 0;
-        secretKey = PropertyManager.getPropertyAsString("secretKey", null);
+        secretKey = PropertyManager.getPropertyAsString("secretKey", "BeGvWqgrVd42hfeH");
 
         switch (balanceMethod){
             case "RoundRobin": balancer = new RoundRobinBalancer(); break;
@@ -92,7 +92,7 @@ public class TransportServlet extends HttpServlet {
 
         resp.getWriter().print(redirectingPath + "\n" + (convertedResponseStr));
         log.error("HttpMethod: POST. Server: " + redirectingPath + ". Status: OK");
-        if (PropertyManager.getPropertyAsString("balanceMethod", null).equals("LeastConnections")){
+        if (PropertyManager.getPropertyAsString("balanceMethod", "LeastConnections").equals("LeastConnections")){
             balancer.decrementRequestCounter();
         }
     }
@@ -112,7 +112,7 @@ public class TransportServlet extends HttpServlet {
                 request.setEntity(entity);
 
                 String str = request.getURI().toString();
-                if (PropertyManager.getPropertyAsBoolean("onlyTransport", null) &&
+                if (PropertyManager.getPropertyAsBoolean("onlyTransport", false) &&
                         (transportPath + "convert").equals(request.getURI().toString())) {
                     isFault = prepateToRetry();
                 } else {

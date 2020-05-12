@@ -31,7 +31,7 @@ public class    Main
         PropertyManager.load();
         Common.configure();
 
-        addresses = PropertyManager.getPropertyAsString("addresses", null).split(";");
+        addresses = PropertyManager.getPropertyAsString("addresses", "localhost:8888").split(";");
 
         runServer();
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
