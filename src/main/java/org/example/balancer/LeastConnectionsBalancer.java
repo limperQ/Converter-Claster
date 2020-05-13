@@ -9,6 +9,7 @@ public class LeastConnectionsBalancer implements Balancer {
     private String[] addresses;
 
     public int getServerCounter() { return serverCounter; }
+    public int getLeastActiveServerCounter() { return activeRequestCounters[currentIndex]; }
 
     public LeastConnectionsBalancer() {
         addresses = PropertyManager.getPropertyAsString("addresses", null).split(";");
