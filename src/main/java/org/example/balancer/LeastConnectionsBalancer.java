@@ -2,7 +2,7 @@ package org.example.balancer;
 
 import org.example.utils.PropertyManager;
 
-public class LeastConnectionsBalancer implements IBalancer {
+public class LeastConnectionsBalancer implements Balancer {
     private int serverCounter;
     private int currentIndex;
     private int[] activeRequestCounters;

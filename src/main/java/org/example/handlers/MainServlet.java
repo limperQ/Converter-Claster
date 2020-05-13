@@ -1,8 +1,10 @@
 package org.example.handlers;
 
 import org.apache.commons.io.IOUtils;
+import org.example.crypto.AesCipher;
 import org.example.model.Answer;
 import org.example.utils.Common;
+import org.example.utils.PropertyManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,48 +20,65 @@ import java.io.IOException;
 import java.io.StringReader;
 
 @WebServlet("/convert")
-public class MainServlet extends HttpServlet
-{
+public class MainServlet extends HttpServlet {
+    static String secretKey;
     private static Logger log = LoggerFactory.getLogger(MainServlet.class.getSimpleName());
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
-    {
-        try {
-            String reqStr = IOUtils.toString(req.getInputStream());
 
-            JAXBContext jc = null;
-            Unmarshaller jaxbUnmarshaller = null;
-            StringReader reader = new StringReader(reqStr);
-            Object respObj = null;
-
-            if(reqStr.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:admi.002.001.01\">")) {
-                jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.admi_002_001.Document.class);
-                jaxbUnmarshaller = jc.createUnmarshaller();
-                respObj = (iso.std.iso._20022.tech.xsd.admi_002_001.Document) jaxbUnmarshaller.unmarshal(reader);
-            }
-            else if(reqStr.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03\">")) {
-                jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.pacs_028_001.Document.class);
-                jaxbUnmarshaller = jc.createUnmarshaller();
-                respObj = (iso.std.iso._20022.tech.xsd.pacs_028_001.Document) jaxbUnmarshaller.unmarshal(reader);
-            }
-            else {
-                resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                return;
-            }
-
-            resp.setContentType("application/json");
-            resp.setStatus(HttpServletResponse.SC_OK);
-            resp.getWriter().print(Common.getPrettyGson().toJson(respObj));
-        } catch (JAXBException e) {
-            e.printStackTrace();
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            return;
-        }
+    public void init() {
+        secretKey = PropertyManager.getPropertyAsString("secretKey", "BeGvWqgrVd42hfeH");
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-    {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String reqStr = IOUtils.toString(req.getInputStream());
+        String decryptedStr = AesCipher.decrypt(secretKey, reqStr);
+        Boolean isEncrypted = decryptedStr != null;
+        if (isEncrypted) {
+            reqStr = decryptedStr;
+        }
+
+        Object respObj = convert(resp, reqStr);
+
+        String convertedResponseStr = Common.getPrettyGson().toJson(respObj);
+        if (isEncrypted){
+            convertedResponseStr = AesCipher.encrypt(secretKey, Common.getPrettyGson().toJson(respObj));;
+        }
+
+        resp.setContentType("application/json");
+        resp.setStatus(HttpServletResponse.SC_OK);
+        resp.getWriter().print(convertedResponseStr);
+
+    }
+
+    private Object convert(HttpServletResponse resp, String xmlBody) {
+        JAXBContext jc = null;
+        Unmarshaller jaxbUnmarshaller = null;
+        StringReader reader = new StringReader(xmlBody);
+        Object respObj = null;
+        try {
+            if (xmlBody.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:admi.002.001.01\">")) {
+                jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.admi_002_001.Document.class);
+                jaxbUnmarshaller = jc.createUnmarshaller();
+                respObj = (iso.std.iso._20022.tech.xsd.admi_002_001.Document) jaxbUnmarshaller.unmarshal(reader);
+            } else if (xmlBody.contains("<Document xmlns=\"urn:iso:std:iso:20022:tech:xsd:pacs.028.001.03\">")) {
+                jc = JAXBContext.newInstance(iso.std.iso._20022.tech.xsd.pacs_028_001.Document.class);
+                jaxbUnmarshaller = jc.createUnmarshaller();
+                respObj = (iso.std.iso._20022.tech.xsd.pacs_028_001.Document) jaxbUnmarshaller.unmarshal(reader);
+            } else {
+                resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                return null;
+            }
+        } catch (JAXBException e) {
+            e.printStackTrace();
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            return null;
+        }
+
+        return respObj;
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_OK);
         Answer answer = new Answer("OK", null);

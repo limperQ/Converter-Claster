@@ -10,7 +10,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.example.balancer.IBalancer;
+import org.example.balancer.Balancer;
 import org.example.balancer.LeastConnectionsBalancer;
 import org.example.balancer.RoundRobinBalancer;
 import org.example.balancer.WeightedRoundRobinBalancer;
@@ -37,7 +37,7 @@ public class TransportServlet extends HttpServlet {
     private String redirectingPath;
     private static int tryCounter;
     private static int serverCounter;
-    private IBalancer balancer;
+    private Balancer balancer;
     static String secretKey;
 
     @Override
@@ -58,11 +58,6 @@ public class TransportServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         transportPath = req.getRequestURL().toString();
         String reqStr = IOUtils.toString(req.getInputStream());
-        String decryptedStr = AesCipher.decrypt(secretKey, reqStr);
-        Boolean isEncrypted = decryptedStr != null;
-        if (isEncrypted){
-            reqStr = decryptedStr;
-        }
 
         if (StringUtils.isBlank(reqStr)) {
             resp.setContentType("application/json");
@@ -81,16 +76,12 @@ public class TransportServlet extends HttpServlet {
         }
 
         HttpEntity convertedResponse = response.getEntity();
-        String convertedResponseStr = IOUtils.toString(convertedResponse.getContent());
-        String encryptedStr = AesCipher.encrypt(secretKey, convertedResponseStr);
-        if (isEncrypted){
-            convertedResponseStr = encryptedStr;
-        }
+        String responseStr = IOUtils.toString(convertedResponse.getContent());
 
-        resp.setContentType(isEncrypted ? "text/text" : "application/json");
+        resp.setContentType("application/json");
         resp.setStatus(HttpServletResponse.SC_OK);
+        resp.getWriter().print(responseStr);
 
-        resp.getWriter().print(convertedResponseStr);
         log.error("HttpMethod: POST. Server: " + redirectingPath + ". Status: OK");
         if (PropertyManager.getPropertyAsString("balanceMethod", "LeastConnections").equals("LeastConnections")){
             balancer.decrementRequestCounter();

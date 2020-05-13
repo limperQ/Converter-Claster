@@ -2,7 +2,7 @@ package org.example.balancer;
 
 import org.example.utils.PropertyManager;
 
-public class WeightedRoundRobinBalancer implements IBalancer{
+public class WeightedRoundRobinBalancer implements Balancer {
     private int serverCounter;
     private int requestCounter;
     private String[] addresses;
