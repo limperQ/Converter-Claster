@@ -58,6 +58,7 @@ public class MainServletTest
 
         StringEntity stringEntity = new StringEntity(sendString);
         request.setEntity(stringEntity);
+        System.out.println(objectString);
 
         HttpResponse response = client.execute(request);
         HttpEntity resp = response.getEntity();

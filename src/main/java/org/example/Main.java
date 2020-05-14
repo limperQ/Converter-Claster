@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class    Main
+public class Main
 {
     private static Logger log = LoggerFactory.getLogger(Main.class.getSimpleName());
     private static String[] addresses;

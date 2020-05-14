@@ -1,0 +1,1091 @@
+17:11:56,143 DEBUG log:initialized:176 - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.eclipse.jetty.util.log) via org.eclipse.jetty.util.log.Slf4jLog
+17:11:56,159  INFO log:initialized:186 - Logging initialized @396ms
+17:11:56,177 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@721e0f4f added {qtp866191240{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:11:56,198 DEBUG ContainerLifeCycle:addBean:323 - HttpConnectionFactory@49e4cb85[HTTP/1.1] added {HttpConfiguration@2133c8f8{32768/8192,8192/8192,https://:0,[]},POJO}
+17:11:56,203 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3f3afe78{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@721e0f4f,UNMANAGED}
+17:11:56,203 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3f3afe78{null,[]}{0.0.0.0:0} added {qtp866191240{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:11:56,204 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3f3afe78{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@3b6eb2ec,AUTO}
+17:11:56,205 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3f3afe78{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@7f63425a,POJO}
+17:11:56,206 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3f3afe78{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@49e4cb85[HTTP/1.1],AUTO}
+17:11:56,206 DEBUG ServerConnector:addConnectionFactory:396 - ServerConnector@3f3afe78{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@49e4cb85[HTTP/1.1]
+17:11:56,208 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3f3afe78{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@30c7da1e,MANAGED}
+17:11:56,209 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@721e0f4f added {ServerConnector@3f3afe78{HTTP/1.1,[http/1.1]}{0.0.0.0:8888},AUTO}
+17:11:56,229 DEBUG DecoratedObjectFactory:addDecorator:52 - Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@62043840
+17:11:56,242 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@2c9f9fb0 added {org.eclipse.jetty.server.session.HashSessionManager@2096442d,AUTO}
+17:11:56,242 DEBUG ContainerLifeCycle:addBean:323 - o.e.j.s.ServletContextHandler@9f70c54{/,null,null} added {org.eclipse.jetty.server.session.SessionHandler@2c9f9fb0,MANAGED}
+17:11:56,247 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@2c9f9fb0 added {org.eclipse.jetty.servlet.ServletHandler@39fb3ab6,MANAGED}
+17:11:56,248 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@721e0f4f added {o.e.j.s.ServletContextHandler@9f70c54{http//localhost,null,null},MANAGED}
+17:11:56,249 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@721e0f4f added {org.eclipse.jetty.servlet.ServletHandler@b97c004,MANAGED}
+17:11:56,254 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@b97c004 added {org.example.handlers.MainServlet-6d8a00e3@421ec55d==org.example.handlers.MainServlet,-1,false,AUTO}
+17:11:56,254 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@b97c004 added {[/convert]=>org.example.handlers.MainServlet-6d8a00e3,POJO}
+17:11:56,255 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@b97c004 added {org.example.handlers.TransportServlet-32d992b2@f775f297==org.example.handlers.TransportServlet,-1,false,AUTO}
+17:11:56,256 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@b97c004 added {[/]=>org.example.handlers.TransportServlet-32d992b2,POJO}
+17:11:56,256 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.Server@721e0f4f
+17:11:56,260  INFO Server:doStart:345 - jetty-9.3.7.v20160115
+17:11:56,276 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.server.Server@721e0f4f
+17:11:56,278 DEBUG AbstractLifeCycle:setStarting:185 - starting qtp866191240{STOPPED,8<=0<=200,i=0,q=0}
+17:11:56,278 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @519ms qtp866191240{STARTED,8<=8<=200,i=4,q=0}
+17:11:56,278 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.servlet.ServletHandler@b97c004
+17:11:56,279 DEBUG ServletHandler:updateMappings:1511 - Chose path=/convert mapped to servlet=org.example.handlers.MainServlet-6d8a00e3 from default=false
+17:11:56,281 DEBUG ServletHandler:updateMappings:1511 - Chose path=/ mapped to servlet=org.example.handlers.TransportServlet-32d992b2 from default=false
+17:11:56,281 DEBUG ServletHandler:updateMappings:1532 - filterNameMap={}
+17:11:56,281 DEBUG ServletHandler:updateMappings:1533 - pathFilters=null
+17:11:56,281 DEBUG ServletHandler:updateMappings:1534 - servletFilterMap=null
+17:11:56,281 DEBUG ServletHandler:updateMappings:1535 - servletPathMap={/convert=org.example.handlers.MainServlet-6d8a00e3@421ec55d==org.example.handlers.MainServlet,-1,false, /=org.example.handlers.TransportServlet-32d992b2@f775f297==org.example.handlers.TransportServlet,-1,false}
+17:11:56,282 DEBUG ServletHandler:updateMappings:1536 - servletNameMap={org.example.handlers.TransportServlet-32d992b2=org.example.handlers.TransportServlet-32d992b2@f775f297==org.example.handlers.TransportServlet,-1,false, org.example.handlers.MainServlet-6d8a00e3=org.example.handlers.MainServlet-6d8a00e3@421ec55d==org.example.handlers.MainServlet,-1,false}
+17:11:56,283 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.MainServlet-6d8a00e3@421ec55d==org.example.handlers.MainServlet,-1,false
+17:11:56,299 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @539ms org.example.handlers.MainServlet-6d8a00e3@421ec55d==org.example.handlers.MainServlet,-1,false
+17:11:56,300 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.TransportServlet-32d992b2@f775f297==org.example.handlers.TransportServlet,-1,false
+17:11:56,300 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @540ms org.example.handlers.TransportServlet-32d992b2@f775f297==org.example.handlers.TransportServlet,-1,false
+17:11:56,300 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.servlet.ServletHandler@b97c004
+17:11:56,300 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @540ms org.eclipse.jetty.servlet.ServletHandler@b97c004
+17:11:56,301 DEBUG AbstractLifeCycle:setStarting:185 - starting ServerConnector@3f3afe78{HTTP/1.1,[http/1.1]}{0.0.0.0:8888}
+17:11:56,324 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3f3afe78{HTTP/1.1,[http/1.1]}{0.0.0.0:8888} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8888],POJO}
+17:11:56,324 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@3b6eb2ec
+17:11:56,329 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @569ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@3b6eb2ec
+17:11:56,329 DEBUG AbstractLifeCycle:setStarting:185 - starting HttpConnectionFactory@49e4cb85[HTTP/1.1]
+17:11:56,330 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @570ms HttpConnectionFactory@49e4cb85[HTTP/1.1]
+17:11:56,330 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@30c7da1e
+17:11:56,334 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@4883b407 id=0 keys=-1 selected=-1
+17:11:56,559 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @799ms org.eclipse.jetty.io.ManagedSelector@4883b407 id=0 keys=0 selected=0
+17:11:56,559 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@4883b407 id=0 keys=0 selected=0
+17:11:56,559 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@6325a3ee id=1 keys=-1 selected=-1
+17:11:56,559 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@4883b407 id=0 keys=0 selected=0
+17:11:56,560 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 execute
+17:11:56,560 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 produce enter
+17:11:56,560 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 producing
+17:11:56,560 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:56,560 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @801ms org.eclipse.jetty.io.ManagedSelector@6325a3ee id=1 keys=0 selected=0
+17:11:56,560 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@6325a3ee id=1 keys=0 selected=0
+17:11:56,562 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@1d16f93d id=2 keys=-1 selected=-1
+17:11:56,562 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@6325a3ee id=1 keys=0 selected=0
+17:11:56,562 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@34568351 execute
+17:11:56,562 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@34568351 produce enter
+17:11:56,563 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@34568351 producing
+17:11:56,563 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:56,563 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @804ms org.eclipse.jetty.io.ManagedSelector@1d16f93d id=2 keys=0 selected=0
+17:11:56,563 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@1d16f93d id=2 keys=0 selected=0
+17:11:56,563 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @804ms org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@30c7da1e
+17:11:56,563 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@1d16f93d id=2 keys=0 selected=0
+17:11:56,564 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@45a94fff execute
+17:11:56,564 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@45a94fff produce enter
+17:11:56,564 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@45a94fff producing
+17:11:56,564 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:56,565 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3f3afe78{HTTP/1.1,[http/1.1]}{0.0.0.0:8888} added {acceptor-0@65e2dbf3,POJO}
+17:11:56,565 DEBUG QueuedThreadPool:execute:373 - queue acceptor-0@65e2dbf3
+17:11:56,565 DEBUG QueuedThreadPool:run:571 - run acceptor-0@65e2dbf3
+17:11:56,565  INFO ServerConnector:doStart:270 - Started ServerConnector@3f3afe78{HTTP/1.1,[http/1.1]}{0.0.0.0:8888}
+17:11:56,566 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @806ms ServerConnector@3f3afe78{HTTP/1.1,[http/1.1]}{0.0.0.0:8888}
+17:11:56,566  INFO Server:doStart:397 - Started @807ms
+17:11:56,566 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @807ms org.eclipse.jetty.server.Server@721e0f4f
+17:11:56,566 ERROR Main:runServer:117 - Server has started at port: 8888
+17:11:56,567 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@61f8bee4 added {qtp1335298403{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:11:56,567 DEBUG ContainerLifeCycle:addBean:323 - HttpConnectionFactory@7b49cea0[HTTP/1.1] added {HttpConfiguration@887af79{32768/8192,8192/8192,https://:0,[]},POJO}
+17:11:56,568 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@5b87ed94{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@61f8bee4,UNMANAGED}
+17:11:56,568 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@5b87ed94{null,[]}{0.0.0.0:0} added {qtp1335298403{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:11:56,569 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@5b87ed94{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7fac631b,AUTO}
+17:11:56,569 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@5b87ed94{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@6e0e048a,POJO}
+17:11:56,569 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@5b87ed94{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@7b49cea0[HTTP/1.1],AUTO}
+17:11:56,570 DEBUG ServerConnector:addConnectionFactory:396 - ServerConnector@5b87ed94{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@7b49cea0[HTTP/1.1]
+17:11:56,570 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@5b87ed94{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@5bc79255,MANAGED}
+17:11:56,570 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@61f8bee4 added {ServerConnector@5b87ed94{HTTP/1.1,[http/1.1]}{0.0.0.0:8889},AUTO}
+17:11:56,570 DEBUG DecoratedObjectFactory:addDecorator:52 - Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@47ef968d
+17:11:56,571 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@23e028a9 added {org.eclipse.jetty.server.session.HashSessionManager@3dd4520b,AUTO}
+17:11:56,571 DEBUG ContainerLifeCycle:addBean:323 - o.e.j.s.ServletContextHandler@5ae63ade{/,null,null} added {org.eclipse.jetty.server.session.SessionHandler@23e028a9,MANAGED}
+17:11:56,571 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@23e028a9 added {org.eclipse.jetty.servlet.ServletHandler@610694f1,MANAGED}
+17:11:56,571 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@61f8bee4 added {o.e.j.s.ServletContextHandler@5ae63ade{http//localhost,null,null},MANAGED}
+17:11:56,572 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@61f8bee4 added {org.eclipse.jetty.servlet.ServletHandler@43814d18,MANAGED}
+17:11:56,572 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@43814d18 added {org.example.handlers.MainServlet-5c5a1b69@a039fdc6==org.example.handlers.MainServlet,-1,false,AUTO}
+17:11:56,572 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@43814d18 added {[/convert]=>org.example.handlers.MainServlet-5c5a1b69,POJO}
+17:11:56,572 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@43814d18 added {org.example.handlers.TransportServlet-3701eaf6@a6dd0fcb==org.example.handlers.TransportServlet,-1,false,AUTO}
+17:11:56,572 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@43814d18 added {[/]=>org.example.handlers.TransportServlet-3701eaf6,POJO}
+17:11:56,573 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.Server@61f8bee4
+17:11:56,573  INFO Server:doStart:345 - jetty-9.3.7.v20160115
+17:11:56,573 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.server.Server@61f8bee4
+17:11:56,573 DEBUG AbstractLifeCycle:setStarting:185 - starting qtp1335298403{STOPPED,8<=0<=200,i=0,q=0}
+17:11:56,574 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @815ms qtp1335298403{STARTED,8<=8<=200,i=6,q=0}
+17:11:56,574 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.servlet.ServletHandler@43814d18
+17:11:56,574 DEBUG ServletHandler:updateMappings:1511 - Chose path=/convert mapped to servlet=org.example.handlers.MainServlet-5c5a1b69 from default=false
+17:11:56,575 DEBUG ServletHandler:updateMappings:1511 - Chose path=/ mapped to servlet=org.example.handlers.TransportServlet-3701eaf6 from default=false
+17:11:56,575 DEBUG ServletHandler:updateMappings:1532 - filterNameMap={}
+17:11:56,575 DEBUG ServletHandler:updateMappings:1533 - pathFilters=null
+17:11:56,575 DEBUG ServletHandler:updateMappings:1534 - servletFilterMap=null
+17:11:56,575 DEBUG ServletHandler:updateMappings:1535 - servletPathMap={/convert=org.example.handlers.MainServlet-5c5a1b69@a039fdc6==org.example.handlers.MainServlet,-1,false, /=org.example.handlers.TransportServlet-3701eaf6@a6dd0fcb==org.example.handlers.TransportServlet,-1,false}
+17:11:56,575 DEBUG ServletHandler:updateMappings:1536 - servletNameMap={org.example.handlers.TransportServlet-3701eaf6=org.example.handlers.TransportServlet-3701eaf6@a6dd0fcb==org.example.handlers.TransportServlet,-1,false, org.example.handlers.MainServlet-5c5a1b69=org.example.handlers.MainServlet-5c5a1b69@a039fdc6==org.example.handlers.MainServlet,-1,false}
+17:11:56,576 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.MainServlet-5c5a1b69@a039fdc6==org.example.handlers.MainServlet,-1,false
+17:11:56,576 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @817ms org.example.handlers.MainServlet-5c5a1b69@a039fdc6==org.example.handlers.MainServlet,-1,false
+17:11:56,577 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.TransportServlet-3701eaf6@a6dd0fcb==org.example.handlers.TransportServlet,-1,false
+17:11:56,577 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @818ms org.example.handlers.TransportServlet-3701eaf6@a6dd0fcb==org.example.handlers.TransportServlet,-1,false
+17:11:56,577 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.servlet.ServletHandler@43814d18
+17:11:56,577 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @818ms org.eclipse.jetty.servlet.ServletHandler@43814d18
+17:11:56,577 DEBUG AbstractLifeCycle:setStarting:185 - starting ServerConnector@5b87ed94{HTTP/1.1,[http/1.1]}{0.0.0.0:8889}
+17:11:56,578 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@5b87ed94{HTTP/1.1,[http/1.1]}{0.0.0.0:8889} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8889],POJO}
+17:11:56,578 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7fac631b
+17:11:56,578 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @819ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@7fac631b
+17:11:56,578 DEBUG AbstractLifeCycle:setStarting:185 - starting HttpConnectionFactory@7b49cea0[HTTP/1.1]
+17:11:56,579 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @819ms HttpConnectionFactory@7b49cea0[HTTP/1.1]
+17:11:56,579 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@5bc79255
+17:11:56,579 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@3cef309d id=0 keys=-1 selected=-1
+17:11:56,580 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @821ms org.eclipse.jetty.io.ManagedSelector@3cef309d id=0 keys=0 selected=0
+17:11:56,580 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@3cef309d id=0 keys=0 selected=0
+17:11:56,581 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@32709393 id=1 keys=-1 selected=-1
+17:11:56,581 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@3cef309d id=0 keys=0 selected=0
+17:11:56,581 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db execute
+17:11:56,581 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db produce enter
+17:11:56,581 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db producing
+17:11:56,581 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:56,581 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @822ms org.eclipse.jetty.io.ManagedSelector@32709393 id=1 keys=0 selected=0
+17:11:56,582 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@32709393 id=1 keys=0 selected=0
+17:11:56,582 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@3d99d22e id=2 keys=-1 selected=-1
+17:11:56,582 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@32709393 id=1 keys=0 selected=0
+17:11:56,582 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@5d400e5d execute
+17:11:56,582 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@5d400e5d produce enter
+17:11:56,582 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@5d400e5d producing
+17:11:56,582 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:56,583 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @823ms org.eclipse.jetty.io.ManagedSelector@3d99d22e id=2 keys=0 selected=0
+17:11:56,583 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@3d99d22e id=2 keys=0 selected=0
+17:11:56,583 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @824ms org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@5bc79255
+17:11:56,583 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@3d99d22e id=2 keys=0 selected=0
+17:11:56,583 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@401862f8 execute
+17:11:56,583 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@5b87ed94{HTTP/1.1,[http/1.1]}{0.0.0.0:8889} added {acceptor-0@49fc609f,POJO}
+17:11:56,583 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@401862f8 produce enter
+17:11:56,583 DEBUG QueuedThreadPool:execute:373 - queue acceptor-0@49fc609f
+17:11:56,584 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@401862f8 producing
+17:11:56,584 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:56,584 DEBUG QueuedThreadPool:run:571 - run acceptor-0@49fc609f
+17:11:56,584  INFO ServerConnector:doStart:270 - Started ServerConnector@5b87ed94{HTTP/1.1,[http/1.1]}{0.0.0.0:8889}
+17:11:56,584 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @825ms ServerConnector@5b87ed94{HTTP/1.1,[http/1.1]}{0.0.0.0:8889}
+17:11:56,584  INFO Server:doStart:397 - Started @825ms
+17:11:56,585 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @825ms org.eclipse.jetty.server.Server@61f8bee4
+17:11:56,585 ERROR Main:runServer:117 - Server has started at port: 8889
+17:11:57,092 DEBUG RequestAddCookies:process:122 - CookieSpec selected: default
+17:11:57,104 DEBUG RequestAuthCache:process:76 - Auth cache not set in the context
+17:11:57,105 DEBUG PoolingHttpClientConnectionManager:requestConnection:249 - Connection request: [route: {}->http://localhost:8888][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+17:11:57,120 DEBUG PoolingHttpClientConnectionManager:leaseConnection:282 - Connection leased: [id: 0][route: {}->http://localhost:8888][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+17:11:57,122 DEBUG MainClientExec:execute:234 - Opening connection {}->http://localhost:8888
+17:11:57,128 DEBUG DefaultHttpClientConnectionOperator:connect:138 - Connecting to localhost/127.0.0.1:8888
+17:11:57,132 DEBUG DefaultHttpClientConnectionOperator:connect:145 - Connection established 127.0.0.1:50486<->127.0.0.1:8888
+17:11:57,132 DEBUG ManagedSelector:submit:116 - Queued change org.eclipse.jetty.io.ManagedSelector$Accept@1868c2c7 on org.eclipse.jetty.io.ManagedSelector@4883b407 id=0 keys=0 selected=0
+17:11:57,132 DEBUG MainClientExec:execute:255 - Executing request GET / HTTP/1.1
+17:11:57,133 DEBUG MainClientExec:execute:260 - Target auth state: UNCHALLENGED
+17:11:57,133 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 0/0 selected
+17:11:57,133 DEBUG ManagedSelector:runChange:214 - Running change org.eclipse.jetty.io.ManagedSelector$Accept@1868c2c7
+17:11:57,133 DEBUG MainClientExec:execute:266 - Proxy auth state: UNCHALLENGED
+17:11:57,134 DEBUG ManagedSelector:submit:116 - Queued change org.eclipse.jetty.io.ManagedSelector$CreateEndPoint@d92d0fb on org.eclipse.jetty.io.ManagedSelector@4883b407 id=0 keys=1 selected=0
+17:11:57,134 DEBUG ExecuteProduceConsume:produceAndRun:165 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 produced org.eclipse.jetty.io.ManagedSelector$CreateEndPoint@d92d0fb
+17:11:57,134 DEBUG ExecuteProduceConsume:produceAndRun:206 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 dispatch
+17:11:57,135 DEBUG QueuedThreadPool:execute:373 - queue EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7
+17:11:57,135 DEBUG ExecuteProduceConsume:produceAndRun:212 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 run org.eclipse.jetty.io.ManagedSelector$CreateEndPoint@d92d0fb
+17:11:57,135 DEBUG QueuedThreadPool:run:571 - run EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7
+17:11:57,135 DEBUG ExecuteProduceConsume:run:125 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 run
+17:11:57,135 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 produce enter
+17:11:57,135 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 producing
+17:11:57,135 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,136 DEBUG headers:onRequestSubmitted:135 - http-outgoing-0 >> GET / HTTP/1.1
+17:11:57,136 DEBUG headers:onRequestSubmitted:138 - http-outgoing-0 >> Host: localhost:8888
+17:11:57,136 DEBUG headers:onRequestSubmitted:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:11:57,136 DEBUG headers:onRequestSubmitted:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)
+17:11:57,136 DEBUG headers:onRequestSubmitted:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:11:57,136 DEBUG wire:wire:72 - http-outgoing-0 >> "GET / HTTP/1.1[\r][\n]"
+17:11:57,137 DEBUG wire:wire:72 - http-outgoing-0 >> "Host: localhost:8888[\r][\n]"
+17:11:57,137 DEBUG wire:wire:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:11:57,137 DEBUG wire:wire:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)[\r][\n]"
+17:11:57,137 DEBUG wire:wire:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:11:57,137 DEBUG wire:wire:72 - http-outgoing-0 >> "[\r][\n]"
+17:11:57,145 DEBUG AbstractEndPoint:onOpen:105 - onOpen SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,6/30000,null}{io=0/0,kio=0,kro=0}
+17:11:57,146 DEBUG IdleTimeout:checkIdleTimeout:156 - SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,7/30000,null}{io=0/0,kio=0,kro=0} idle timeout check, elapsed: 6 ms, remaining: 29994 ms
+17:11:57,153 DEBUG PreEncodedHttpField:<clinit>:64 - HttpField encoders loaded: [org.eclipse.jetty.http.Http1FieldPreEncoder@4f2dd981]
+17:11:57,189 DEBUG HttpChannel:<init>:98 - new HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null} -> SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,49/30000,null}{io=0/0,kio=0,kro=0},null,HttpChannelState@54be269c{s=IDLE a=null i=true r=!P!U w=false}
+17:11:57,198 DEBUG HttpConnection:<init>:104 - New HTTP Connection HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,59/30000,null}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}]
+17:11:57,199 DEBUG AbstractConnection:onOpen:195 - onOpen HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,60/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}]
+17:11:57,200 DEBUG AbstractConnection:fillInterested:141 - fillInterested HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,60/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}]
+17:11:57,201 DEBUG FillInterest:register:63 - FillInterest@4aa30051{true,AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}]}
+17:11:57,202 DEBUG FillInterest:register:77 - FillInterest@4aa30051{true,AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}]}
+17:11:57,202 DEBUG SelectChannelEndPoint:changeInterests:248 - changeInterests p=false 0->1 for SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=0}
+17:11:57,203 DEBUG ManagedSelector:submit:116 - Queued change SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,3/30000,HttpConnection}{io=0/1,kio=0,kro=0}:runUpdateKey on org.eclipse.jetty.io.ManagedSelector@4883b407 id=0 keys=1 selected=0
+17:11:57,203 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 0/1 selected
+17:11:57,203 DEBUG ManagedSelector:createEndPoint:416 - Created SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,3/30000,HttpConnection}{io=0/1,kio=0,kro=0}
+17:11:57,203 DEBUG ExecuteProduceConsume:produceAndRun:215 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 ran org.eclipse.jetty.io.ManagedSelector$CreateEndPoint@d92d0fb
+17:11:57,203 DEBUG ManagedSelector:runChange:214 - Running change SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,3/30000,HttpConnection}{io=0/1,kio=0,kro=0}:runUpdateKey
+17:11:57,203 DEBUG ExecuteProduceConsume:produceAndRun:228 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 produce exit
+17:11:57,204 DEBUG QueuedThreadPool:run:574 - ran org.eclipse.jetty.io.ManagedSelector@4883b407 id=0 keys=1 selected=0
+17:11:57,204 DEBUG SelectChannelEndPoint:updateKey:214 - Key interests updated 0 -> 1 on SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,4/30000,HttpConnection}{io=1/1,kio=1,kro=0}
+17:11:57,204 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,204 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 1/1 selected
+17:11:57,205 DEBUG SelectChannelEndPoint:onSelected:159 - onSelected 1->0 r=true w=false for SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,4/30000,HttpConnection}{io=1/0,kio=1,kro=1}
+17:11:57,205 DEBUG SelectChannelEndPoint:onSelected:186 - task SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,5/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,205 DEBUG ExecuteProduceConsume:produceAndRun:165 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 produced SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,5/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,205 DEBUG ExecuteProduceConsume:produceAndRun:206 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 dispatch
+17:11:57,206 DEBUG QueuedThreadPool:execute:373 - queue EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7
+17:11:57,206 DEBUG QueuedThreadPool:run:571 - run EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7
+17:11:57,206 DEBUG ExecuteProduceConsume:run:125 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 run
+17:11:57,206 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 produce enter
+17:11:57,206 DEBUG ExecuteProduceConsume:produceAndRun:212 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 run SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,6/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,206 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 producing
+17:11:57,207 DEBUG SelectChannelEndPoint:updateKey:214 - Key interests updated 1 -> 0 on SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,6/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,207 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,207 DEBUG FillInterest:fillable:93 - FillInterest@4aa30051{true,AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,6/30000,HttpConnection}{io=0/0,kio=1,kro=1}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}]}} fillable AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,7/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}]}
+17:11:57,208 DEBUG HttpConnection:onFillable:215 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,7/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}] onFillable enter HttpChannelState@54be269c{s=IDLE a=null i=true r=!P!U w=false} null
+17:11:57,208 DEBUG ChannelEndPoint:fill:147 - filled 149 SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,8/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,212 DEBUG HttpConnection:fillRequestBuffer:322 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}] filled 149 HeapByteBuffer@2df29904[p=0,l=149,c=8192,r=149]={<<<GET / HTTP/1.1\r\nH...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,212 DEBUG HttpConnection:parseRequestBuffer:339 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=0,c=false,a=IDLE,uri=null}] parse HeapByteBuffer@2df29904[p=0,l=149,c=8192,r=149]={<<<GET / HTTP/1.1\r\nH...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+17:11:57,213 DEBUG HttpParser:parseNext:1163 - parseNext s=START HeapByteBuffer@2df29904[p=0,l=149,c=8192,r=149]={<<<GET / HTTP/1.1\r\nH...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,213 DEBUG HttpParser:setState:1542 - START --> SPACE1
+17:11:57,214 DEBUG HttpParser:setState:1542 - SPACE1 --> URI
+17:11:57,214 DEBUG HttpParser:setState:1542 - URI --> SPACE2
+17:11:57,214 DEBUG HttpParser:setState:1542 - SPACE2 --> REQUEST_VERSION
+17:11:57,215 DEBUG HttpParser:setState:1542 - REQUEST_VERSION --> HEADER
+17:11:57,215 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_VALUE
+17:11:57,216 DEBUG HttpParser:setState:1542 - HEADER_VALUE --> HEADER_IN_VALUE
+17:11:57,216 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,216 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,217 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,217 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_VALUE
+17:11:57,217 DEBUG HttpParser:setState:1542 - HEADER_VALUE --> HEADER_IN_VALUE
+17:11:57,217 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,217 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,217 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,219 DEBUG HttpParser:setState:1542 - HEADER --> END
+17:11:57,219 DEBUG HttpChannel:onRequestComplete:602 - HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=//localhost:8888/} onRequestComplete
+17:11:57,220 DEBUG HttpInput:addContent:385 - HttpInputOverHTTP@7e18ef0[c=0,s=STREAM] addContent EOF
+17:11:57,220 DEBUG HttpConnection:parseRequestBuffer:344 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,12/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=END,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=//localhost:8888/}] parsed true HttpParser{s=END,0 of 0}
+17:11:57,221 DEBUG HttpConnection:releaseRequestBuffer:192 - releaseRequestBuffer HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,12/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=END,0 of 0},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=//localhost:8888/}]
+17:11:57,221 DEBUG HttpChannel:handle:271 - HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=//localhost:8888/} handle //localhost:8888/ 
+17:11:57,221 DEBUG HttpChannelState:handling:188 - HttpChannelState@54be269c{s=IDLE a=null i=true r=!P!U w=false} handling IDLE
+17:11:57,223 DEBUG HttpChannel:handle:284 - HttpChannelOverHttp@794ffe43{r=1,c=false,a=DISPATCHED,uri=//localhost:8888/} action DISPATCH
+17:11:57,224 DEBUG Server:handle:506 - REQUEST on HttpChannelOverHttp@794ffe43{r=1,c=false,a=DISPATCHED,uri=//localhost:8888/}
+GET //localhost:8888/
+Host: localhost:8888
+Connection: keep-alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)
+Accept-Encoding: gzip,deflate
+
+
+17:11:57,225 DEBUG ServletHandler:doScope:497 - servlet null|/|null -> org.example.handlers.TransportServlet-32d992b2@f775f297==org.example.handlers.TransportServlet,-1,false
+17:11:57,225 DEBUG ServletHandler:doHandle:560 - chain=null
+17:11:57,230 DEBUG ServletHolder:initServlet:639 - Servlet.init org.example.handlers.TransportServlet@b604a36 for org.example.handlers.TransportServlet-32d992b2
+17:11:57,231 DEBUG HttpChannel:commit:703 - Commit HTTP/1.1{s=302,h=2} to HttpChannelOverHttp@794ffe43{r=1,c=true,a=DISPATCHED,uri=//localhost:8888/}
+17:11:57,234 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@56d4922f[PROCESSING][i=HTTP/1.1{s=302,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@5ad879b] generate: NEED_HEADER (null,[p=0,l=0,c=0,r=0],true)@START
+17:11:57,235 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@56d4922f[PROCESSING][i=HTTP/1.1{s=302,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@5ad879b] generate: FLUSH ([p=0,l=151,c=8192,r=151],[p=0,l=0,c=0,r=0],true)@COMPLETING
+17:11:57,236 DEBUG WriteFlusher:write:306 - write: WriteFlusher@4fd920a7{IDLE} [HeapByteBuffer@2df29904[p=0,l=151,c=8192,r=151]={<<<HTTP/1.1 302 Foun....v20160115)\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+17:11:57,236 DEBUG WriteFlusher:updateState:117 - update WriteFlusher@4fd920a7{WRITING}:IDLE-->WRITING
+17:11:57,236 DEBUG wire:wire:72 - http-outgoing-0 << "HTTP/1.1 302 Found[\r][\n]"
+17:11:57,236 DEBUG ChannelEndPoint:flush:193 - flushed 151 SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,W,28/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,236 DEBUG wire:wire:72 - http-outgoing-0 << "Date: Thu, 14 May 2020 14:11:57 GMT[\r][\n]"
+17:11:57,237 DEBUG WriteFlusher:flush:423 - Flushed=true 151/151+0 WriteFlusher@4fd920a7{WRITING}
+17:11:57,237 DEBUG wire:wire:72 - http-outgoing-0 << "Location: http://localhost:8888/convert[\r][\n]"
+17:11:57,237 DEBUG WriteFlusher:updateState:117 - update WriteFlusher@4fd920a7{IDLE}:WRITING-->IDLE
+17:11:57,237 DEBUG wire:wire:72 - http-outgoing-0 << "Content-Length: 0[\r][\n]"
+17:11:57,237 DEBUG wire:wire:72 - http-outgoing-0 << "Server: Jetty(9.3.7.v20160115)[\r][\n]"
+17:11:57,238 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@56d4922f[PROCESSING][i=HTTP/1.1{s=302,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@5ad879b] generate: DONE ([p=151,l=151,c=8192,r=0],[p=0,l=0,c=0,r=0],true)@END
+17:11:57,238 DEBUG wire:wire:72 - http-outgoing-0 << "[\r][\n]"
+17:11:57,238 DEBUG Server:handle:520 - RESPONSE for / h=true
+302 null
+Date: Thu, 14 May 2020 14:11:57 GMT
+Location: http://localhost:8888/convert
+
+
+17:11:57,238 DEBUG HttpChannelState:unhandle:331 - HttpChannelState@54be269c{s=DISPATCHED a=null i=true r=!P!U w=false} unhandle DISPATCHED
+17:11:57,238 DEBUG HttpChannel:handle:284 - HttpChannelOverHttp@794ffe43{r=1,c=true,a=COMPLETING,uri=//localhost:8888/} action COMPLETE
+17:11:57,240 DEBUG headers:onResponseReceived:124 - http-outgoing-0 << HTTP/1.1 302 Found
+17:11:57,241 DEBUG headers:onResponseReceived:127 - http-outgoing-0 << Date: Thu, 14 May 2020 14:11:57 GMT
+17:11:57,241 DEBUG headers:onResponseReceived:127 - http-outgoing-0 << Location: http://localhost:8888/convert
+17:11:57,241 DEBUG headers:onResponseReceived:127 - http-outgoing-0 << Content-Length: 0
+17:11:57,241 DEBUG headers:onResponseReceived:127 - http-outgoing-0 << Server: Jetty(9.3.7.v20160115)
+17:11:57,241 DEBUG HttpParser:reset:1522 - reset HttpParser{s=END,0 of 0}
+17:11:57,241 DEBUG HttpParser:setState:1542 - END --> START
+17:11:57,242 DEBUG HttpChannel:handle:479 - HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null} handle exit, result COMPLETE
+17:11:57,242 DEBUG ChannelEndPoint:fill:147 - filled 0 SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,5/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,242 DEBUG ChannelEndPoint:fill:147 - filled 0 SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,5/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,243 DEBUG HttpConnection:fillRequestBuffer:322 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,6/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}] filled 0 HeapByteBuffer@2df29904[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 302 Foun...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,243 DEBUG HttpConnection:parseRequestBuffer:339 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,6/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}] parse HeapByteBuffer@2df29904[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 302 Foun...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+17:11:57,244 DEBUG HttpParser:parseNext:1163 - parseNext s=START HeapByteBuffer@2df29904[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 302 Foun...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,244 DEBUG HttpConnection:parseRequestBuffer:344 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,7/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}] parsed false HttpParser{s=START,0 of -1}
+17:11:57,245 DEBUG HttpConnection:releaseRequestBuffer:192 - releaseRequestBuffer HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,7/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}]
+17:11:57,245 DEBUG AbstractConnection:fillInterested:141 - fillInterested HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,8/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}]
+17:11:57,246 DEBUG FillInterest:register:63 - FillInterest@4aa30051{true,AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}]}
+17:11:57,246 DEBUG MainClientExec:execute:284 - Connection can be kept alive indefinitely
+17:11:57,246 DEBUG PoolingHttpClientConnectionManager:releaseConnection:314 - Connection [id: 0][route: {}->http://localhost:8888] can be kept alive indefinitely
+17:11:57,247 DEBUG PoolingHttpClientConnectionManager:releaseConnection:320 - Connection released: [id: 0][route: {}->http://localhost:8888][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+17:11:57,247 DEBUG FillInterest:register:77 - FillInterest@4aa30051{true,AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}]}
+17:11:57,247 DEBUG SelectChannelEndPoint:changeInterests:248 - changeInterests p=false 0->1 for SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=1}
+17:11:57,248 DEBUG ManagedSelector:submit:116 - Queued change SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=1}:runUpdateKey on org.eclipse.jetty.io.ManagedSelector@4883b407 id=0 keys=1 selected=0
+17:11:57,248 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 0/1 selected
+17:11:57,248 DEBUG ManagedSelector:runChange:214 - Running change SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,3/30000,HttpConnection}{io=0/1,kio=0,kro=1}:runUpdateKey
+17:11:57,248 DEBUG HttpConnection:onFillable:262 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,3/30000,HttpConnection}{io=0/1,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}] onFillable exit HttpChannelState@54be269c{s=IDLE a=null i=true r=!P!U w=false} null
+17:11:57,248 DEBUG SelectChannelEndPoint:updateKey:214 - Key interests updated 0 -> 1 on SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,3/30000,HttpConnection}{io=1/1,kio=1,kro=1}
+17:11:57,248 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,249 DEBUG ExecuteProduceConsume:produceAndRun:215 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 ran SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,3/30000,HttpConnection}{io=1/1,kio=1,kro=1}:runFillable
+17:11:57,249 DEBUG ExecuteProduceConsume:produceAndRun:228 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 produce exit
+17:11:57,249 DEBUG QueuedThreadPool:run:574 - ran EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7
+17:11:57,249 DEBUG DefaultRedirectStrategy:getLocationURI:142 - Redirect requested to location 'http://localhost:8888/convert'
+17:11:57,252 DEBUG RedirectExec:execute:159 - Redirecting to 'http://localhost:8888/convert' via {}->http://localhost:8888
+17:11:57,252 DEBUG RequestAddCookies:process:122 - CookieSpec selected: default
+17:11:57,252 DEBUG RequestAuthCache:process:76 - Auth cache not set in the context
+17:11:57,253 DEBUG PoolingHttpClientConnectionManager:requestConnection:249 - Connection request: [route: {}->http://localhost:8888][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+17:11:57,253 DEBUG PoolingHttpClientConnectionManager:leaseConnection:282 - Connection leased: [id: 0][route: {}->http://localhost:8888][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+17:11:57,253 DEBUG MainClientExec:execute:255 - Executing request GET /convert HTTP/1.1
+17:11:57,253 DEBUG MainClientExec:execute:260 - Target auth state: UNCHALLENGED
+17:11:57,253 DEBUG MainClientExec:execute:266 - Proxy auth state: UNCHALLENGED
+17:11:57,253 DEBUG headers:onRequestSubmitted:135 - http-outgoing-0 >> GET /convert HTTP/1.1
+17:11:57,253 DEBUG headers:onRequestSubmitted:138 - http-outgoing-0 >> Host: localhost:8888
+17:11:57,253 DEBUG headers:onRequestSubmitted:138 - http-outgoing-0 >> Connection: Keep-Alive
+17:11:57,253 DEBUG headers:onRequestSubmitted:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)
+17:11:57,254 DEBUG headers:onRequestSubmitted:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+17:11:57,254 DEBUG wire:wire:72 - http-outgoing-0 >> "GET /convert HTTP/1.1[\r][\n]"
+17:11:57,254 DEBUG wire:wire:72 - http-outgoing-0 >> "Host: localhost:8888[\r][\n]"
+17:11:57,254 DEBUG wire:wire:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+17:11:57,254 DEBUG wire:wire:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)[\r][\n]"
+17:11:57,254 DEBUG wire:wire:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:11:57,254 DEBUG wire:wire:72 - http-outgoing-0 >> "[\r][\n]"
+17:11:57,254 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 1/1 selected
+17:11:57,255 DEBUG SelectChannelEndPoint:onSelected:159 - onSelected 1->0 r=true w=false for SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,10/30000,HttpConnection}{io=1/0,kio=1,kro=1}
+17:11:57,255 DEBUG SelectChannelEndPoint:onSelected:186 - task SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,10/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,255 DEBUG ExecuteProduceConsume:produceAndRun:165 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 produced SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,10/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,255 DEBUG ExecuteProduceConsume:produceAndRun:206 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 dispatch
+17:11:57,255 DEBUG QueuedThreadPool:execute:373 - queue EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7
+17:11:57,256 DEBUG QueuedThreadPool:run:571 - run EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7
+17:11:57,256 DEBUG ExecuteProduceConsume:produceAndRun:212 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 run SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,10/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,256 DEBUG ExecuteProduceConsume:run:125 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 run
+17:11:57,256 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 produce enter
+17:11:57,256 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 producing
+17:11:57,256 DEBUG SelectChannelEndPoint:updateKey:214 - Key interests updated 1 -> 0 on SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,11/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,256 DEBUG FillInterest:fillable:93 - FillInterest@4aa30051{true,AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,11/30000,HttpConnection}{io=1/0,kio=1,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}]}} fillable AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,11/30000,HttpConnection}{io=0/0,kio=1,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}]}
+17:11:57,256 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,257 DEBUG HttpConnection:onFillable:215 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,12/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}] onFillable enter HttpChannelState@54be269c{s=IDLE a=null i=true r=!P!U w=false} null
+17:11:57,257 DEBUG ChannelEndPoint:fill:147 - filled 156 SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,12/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,258 DEBUG HttpConnection:fillRequestBuffer:322 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}] filled 156 HeapByteBuffer@2df29904[p=0,l=156,c=8192,r=156]={<<<GET /convert HTTP...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,258 DEBUG HttpConnection:parseRequestBuffer:339 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=1,c=false,a=IDLE,uri=null}] parse HeapByteBuffer@2df29904[p=0,l=156,c=8192,r=156]={<<<GET /convert HTTP...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+17:11:57,258 DEBUG HttpParser:parseNext:1163 - parseNext s=START HeapByteBuffer@2df29904[p=0,l=156,c=8192,r=156]={<<<GET /convert HTTP...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,258 DEBUG HttpParser:setState:1542 - START --> SPACE1
+17:11:57,258 DEBUG HttpParser:setState:1542 - SPACE1 --> URI
+17:11:57,258 DEBUG HttpParser:setState:1542 - URI --> SPACE2
+17:11:57,259 DEBUG HttpParser:setState:1542 - SPACE2 --> REQUEST_VERSION
+17:11:57,259 DEBUG HttpParser:setState:1542 - REQUEST_VERSION --> HEADER
+17:11:57,259 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,259 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,259 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,259 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,259 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,259 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,259 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,260 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,260 DEBUG HttpParser:setState:1542 - HEADER --> END
+17:11:57,260 DEBUG HttpChannel:onRequestComplete:602 - HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=//localhost:8888/convert} onRequestComplete
+17:11:57,260 DEBUG HttpInput:addContent:385 - HttpInputOverHTTP@7e18ef0[c=0,s=STREAM] addContent EOF
+17:11:57,260 DEBUG HttpConnection:parseRequestBuffer:344 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=END,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=//localhost:8888/convert}] parsed true HttpParser{s=END,0 of -1}
+17:11:57,261 DEBUG HttpConnection:releaseRequestBuffer:192 - releaseRequestBuffer HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=END,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=//localhost:8888/convert}]
+17:11:57,261 DEBUG HttpChannel:handle:271 - HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=//localhost:8888/convert} handle //localhost:8888/convert 
+17:11:57,261 DEBUG HttpChannelState:handling:188 - HttpChannelState@54be269c{s=IDLE a=null i=true r=!P!U w=false} handling IDLE
+17:11:57,261 DEBUG HttpChannel:handle:284 - HttpChannelOverHttp@794ffe43{r=2,c=false,a=DISPATCHED,uri=//localhost:8888/convert} action DISPATCH
+17:11:57,262 DEBUG Server:handle:506 - REQUEST on HttpChannelOverHttp@794ffe43{r=2,c=false,a=DISPATCHED,uri=//localhost:8888/convert}
+GET //localhost:8888/convert
+Host: localhost:8888
+Connection: keep-alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)
+Accept-Encoding: gzip,deflate
+
+
+17:11:57,262 DEBUG ServletHandler:doScope:497 - servlet null|/convert|null -> org.example.handlers.MainServlet-6d8a00e3@421ec55d==org.example.handlers.MainServlet,-1,false
+17:11:57,262 DEBUG ServletHandler:doHandle:560 - chain=null
+17:11:57,263 DEBUG ServletHolder:initServlet:639 - Servlet.init org.example.handlers.MainServlet@6c9778bb for org.example.handlers.MainServlet-6d8a00e3
+17:11:57,281 DEBUG Server:handle:520 - RESPONSE for /convert h=true
+200 null
+Date: Thu, 14 May 2020 14:11:57 GMT
+Content-Type: application/json
+
+
+17:11:57,281 DEBUG HttpChannelState:unhandle:331 - HttpChannelState@54be269c{s=DISPATCHED a=null i=true r=!P!U w=false} unhandle DISPATCHED
+17:11:57,281 DEBUG HttpChannel:handle:284 - HttpChannelOverHttp@794ffe43{r=2,c=false,a=COMPLETING,uri=//localhost:8888/convert} action COMPLETE
+17:11:57,281 DEBUG HttpChannel:commit:703 - Commit HTTP/1.1{s=200,h=2} to HttpChannelOverHttp@794ffe43{r=2,c=true,a=COMPLETING,uri=//localhost:8888/convert}
+17:11:57,281 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@56d4922f[PROCESSING][i=HTTP/1.1{s=200,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@47ea8095] generate: NEED_HEADER (null,[p=0,l=22,c=32768,r=22],true)@START
+17:11:57,282 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@56d4922f[PROCESSING][i=HTTP/1.1{s=200,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@47ea8095] generate: FLUSH ([p=0,l=140,c=8192,r=140],[p=0,l=22,c=32768,r=22],true)@COMPLETING
+17:11:57,282 DEBUG WriteFlusher:write:306 - write: WriteFlusher@4fd920a7{IDLE} [HeapByteBuffer@2df29904[p=0,l=140,c=8192,r=140]={<<<HTTP/1.1 200 OK\r\n....v20160115)\r\n\r\n>>>gzip,deflate\r\n\r\n\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00},DirectByteBuffer@35067f22[p=0,l=22,c=32768,r=22]={<<<{\n  "status": "OK"\n}\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+17:11:57,282 DEBUG WriteFlusher:updateState:117 - update WriteFlusher@4fd920a7{WRITING}:IDLE-->WRITING
+17:11:57,283 DEBUG wire:wire:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+17:11:57,283 DEBUG ChannelEndPoint:flush:193 - flushed 162 SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,W,26/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,284 DEBUG wire:wire:72 - http-outgoing-0 << "Date: Thu, 14 May 2020 14:11:57 GMT[\r][\n]"
+17:11:57,284 DEBUG WriteFlusher:flush:423 - Flushed=true 140/140+1 WriteFlusher@4fd920a7{WRITING}
+17:11:57,284 DEBUG wire:wire:72 - http-outgoing-0 << "Content-Type: application/json[\r][\n]"
+17:11:57,284 DEBUG WriteFlusher:updateState:117 - update WriteFlusher@4fd920a7{IDLE}:WRITING-->IDLE
+17:11:57,284 DEBUG wire:wire:72 - http-outgoing-0 << "Content-Length: 22[\r][\n]"
+17:11:57,284 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@56d4922f[PROCESSING][i=HTTP/1.1{s=200,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@47ea8095] generate: DONE ([p=140,l=140,c=8192,r=0],[p=22,l=22,c=32768,r=0],true)@END
+17:11:57,284 DEBUG wire:wire:72 - http-outgoing-0 << "Server: Jetty(9.3.7.v20160115)[\r][\n]"
+17:11:57,285 DEBUG wire:wire:72 - http-outgoing-0 << "[\r][\n]"
+17:11:57,285 DEBUG HttpParser:reset:1522 - reset HttpParser{s=END,0 of -1}
+17:11:57,285 DEBUG wire:wire:72 - http-outgoing-0 << "{[\n]"
+17:11:57,285 DEBUG HttpParser:setState:1542 - END --> START
+17:11:57,285 DEBUG wire:wire:72 - http-outgoing-0 << "  "status": "OK"[\n]"
+17:11:57,285 DEBUG HttpChannel:handle:479 - HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null} handle exit, result COMPLETE
+17:11:57,285 DEBUG wire:wire:72 - http-outgoing-0 << "}[\r][\n]"
+17:11:57,286 DEBUG ChannelEndPoint:fill:147 - filled 0 SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,286 DEBUG headers:onResponseReceived:124 - http-outgoing-0 << HTTP/1.1 200 OK
+17:11:57,286 DEBUG ChannelEndPoint:fill:147 - filled 0 SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,286 DEBUG headers:onResponseReceived:127 - http-outgoing-0 << Date: Thu, 14 May 2020 14:11:57 GMT
+17:11:57,286 DEBUG headers:onResponseReceived:127 - http-outgoing-0 << Content-Type: application/json
+17:11:57,286 DEBUG headers:onResponseReceived:127 - http-outgoing-0 << Content-Length: 22
+17:11:57,286 DEBUG HttpConnection:fillRequestBuffer:322 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null}] filled 0 HeapByteBuffer@2df29904[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,286 DEBUG headers:onResponseReceived:127 - http-outgoing-0 << Server: Jetty(9.3.7.v20160115)
+17:11:57,287 DEBUG HttpConnection:parseRequestBuffer:339 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null}] parse HeapByteBuffer@2df29904[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+17:11:57,287 DEBUG MainClientExec:execute:284 - Connection can be kept alive indefinitely
+17:11:57,287 DEBUG HttpParser:parseNext:1163 - parseNext s=START HeapByteBuffer@2df29904[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,287 DEBUG HttpConnection:parseRequestBuffer:344 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null}] parsed false HttpParser{s=START,0 of -1}
+17:11:57,288 DEBUG HttpConnection:releaseRequestBuffer:192 - releaseRequestBuffer HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null}]
+17:11:57,288 DEBUG AbstractConnection:fillInterested:141 - fillInterested HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null}]
+17:11:57,289 DEBUG RequestAddCookies:process:122 - CookieSpec selected: default
+17:11:57,289 DEBUG RequestAuthCache:process:76 - Auth cache not set in the context
+17:11:57,289 DEBUG PoolingHttpClientConnectionManager:requestConnection:249 - Connection request: [route: {}->http://localhost:8889][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+17:11:57,289 DEBUG FillInterest:register:63 - FillInterest@4aa30051{true,AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null}]}
+17:11:57,289 DEBUG PoolingHttpClientConnectionManager:leaseConnection:282 - Connection leased: [id: 1][route: {}->http://localhost:8889][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+17:11:57,289 DEBUG MainClientExec:execute:234 - Opening connection {}->http://localhost:8889
+17:11:57,290 DEBUG DefaultHttpClientConnectionOperator:connect:138 - Connecting to localhost/127.0.0.1:8889
+17:11:57,290 DEBUG FillInterest:register:77 - FillInterest@4aa30051{true,AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@6e165e45{HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null}]}
+17:11:57,290 DEBUG SelectChannelEndPoint:changeInterests:248 - changeInterests p=false 0->1 for SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=1}
+17:11:57,290 DEBUG DefaultHttpClientConnectionOperator:connect:145 - Connection established 127.0.0.1:50487<->127.0.0.1:8889
+17:11:57,290 DEBUG ManagedSelector:submit:116 - Queued change org.eclipse.jetty.io.ManagedSelector$Accept@ffb46e on org.eclipse.jetty.io.ManagedSelector@3cef309d id=0 keys=0 selected=0
+17:11:57,290 DEBUG ManagedSelector:submit:116 - Queued change SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=1}:runUpdateKey on org.eclipse.jetty.io.ManagedSelector@4883b407 id=0 keys=1 selected=0
+17:11:57,290 DEBUG MainClientExec:execute:255 - Executing request GET / HTTP/1.1
+17:11:57,291 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 0/1 selected
+17:11:57,291 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 0/0 selected
+17:11:57,291 DEBUG MainClientExec:execute:260 - Target auth state: UNCHALLENGED
+17:11:57,291 DEBUG HttpConnection:onFillable:262 - HttpConnection@6e165e45[SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,3/30000,HttpConnection}{io=0/1,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@403379d0{s=START},c=HttpChannelOverHttp@794ffe43{r=2,c=false,a=IDLE,uri=null}] onFillable exit HttpChannelState@54be269c{s=IDLE a=null i=true r=!P!U w=false} null
+17:11:57,291 DEBUG ManagedSelector:runChange:214 - Running change SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,3/30000,HttpConnection}{io=0/1,kio=0,kro=1}:runUpdateKey
+17:11:57,291 DEBUG ManagedSelector:runChange:214 - Running change org.eclipse.jetty.io.ManagedSelector$Accept@ffb46e
+17:11:57,291 DEBUG ExecuteProduceConsume:produceAndRun:215 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 ran SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,3/30000,HttpConnection}{io=0/1,kio=0,kro=1}:runFillable
+17:11:57,291 DEBUG MainClientExec:execute:266 - Proxy auth state: UNCHALLENGED
+17:11:57,292 DEBUG ExecuteProduceConsume:produceAndRun:228 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7 produce exit
+17:11:57,292 DEBUG headers:onRequestSubmitted:135 - http-outgoing-1 >> GET / HTTP/1.1
+17:11:57,292 DEBUG headers:onRequestSubmitted:138 - http-outgoing-1 >> Host: localhost:8889
+17:11:57,292 DEBUG ManagedSelector:submit:116 - Queued change org.eclipse.jetty.io.ManagedSelector$CreateEndPoint@3ef6f3ab on org.eclipse.jetty.io.ManagedSelector@3cef309d id=0 keys=1 selected=0
+17:11:57,292 DEBUG SelectChannelEndPoint:updateKey:214 - Key interests updated 0 -> 1 on SelectChannelEndPoint@5206d29b{/127.0.0.1:50486<->8888,Open,in,out,FI,-,4/30000,HttpConnection}{io=1/1,kio=1,kro=1}
+17:11:57,292 DEBUG ExecuteProduceConsume:produceAndRun:165 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db produced org.eclipse.jetty.io.ManagedSelector$CreateEndPoint@3ef6f3ab
+17:11:57,292 DEBUG headers:onRequestSubmitted:138 - http-outgoing-1 >> Connection: Keep-Alive
+17:11:57,292 DEBUG QueuedThreadPool:run:574 - ran EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2247dfb7
+17:11:57,293 DEBUG headers:onRequestSubmitted:138 - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)
+17:11:57,293 DEBUG ExecuteProduceConsume:produceAndRun:206 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db dispatch
+17:11:57,293 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,293 DEBUG QueuedThreadPool:execute:373 - queue EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db
+17:11:57,293 DEBUG headers:onRequestSubmitted:138 - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+17:11:57,294 DEBUG QueuedThreadPool:run:571 - run EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db
+17:11:57,294 DEBUG ExecuteProduceConsume:produceAndRun:212 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db run org.eclipse.jetty.io.ManagedSelector$CreateEndPoint@3ef6f3ab
+17:11:57,294 DEBUG ExecuteProduceConsume:run:125 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db run
+17:11:57,294 DEBUG wire:wire:72 - http-outgoing-1 >> "GET / HTTP/1.1[\r][\n]"
+17:11:57,294 DEBUG AbstractEndPoint:onOpen:105 - onOpen SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,0/30000,null}{io=0/0,kio=0,kro=0}
+17:11:57,294 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db produce enter
+17:11:57,294 DEBUG IdleTimeout:checkIdleTimeout:156 - SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,0/30000,null}{io=0/0,kio=0,kro=0} idle timeout check, elapsed: 0 ms, remaining: 30000 ms
+17:11:57,294 DEBUG wire:wire:72 - http-outgoing-1 >> "Host: localhost:8889[\r][\n]"
+17:11:57,294 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db producing
+17:11:57,295 DEBUG wire:wire:72 - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+17:11:57,295 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,295 DEBUG HttpChannel:<init>:98 - new HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null} -> SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,1/30000,null}{io=0/0,kio=0,kro=0},null,HttpChannelState@43275bd9{s=IDLE a=null i=true r=!P!U w=false}
+17:11:57,295 DEBUG wire:wire:72 - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)[\r][\n]"
+17:11:57,295 DEBUG wire:wire:72 - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:11:57,296 DEBUG HttpConnection:<init>:104 - New HTTP Connection HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,1/30000,null}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}]
+17:11:57,296 DEBUG wire:wire:72 - http-outgoing-1 >> "[\r][\n]"
+17:11:57,296 DEBUG AbstractConnection:onOpen:195 - onOpen HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}]
+17:11:57,296 DEBUG AbstractConnection:fillInterested:141 - fillInterested HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}]
+17:11:57,297 DEBUG FillInterest:register:63 - FillInterest@21a39b75{true,AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}]}
+17:11:57,297 DEBUG FillInterest:register:77 - FillInterest@21a39b75{true,AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=0}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}]}
+17:11:57,297 DEBUG SelectChannelEndPoint:changeInterests:248 - changeInterests p=false 0->1 for SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/1,kio=0,kro=0}
+17:11:57,298 DEBUG ManagedSelector:submit:116 - Queued change SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=0}:runUpdateKey on org.eclipse.jetty.io.ManagedSelector@3cef309d id=0 keys=1 selected=0
+17:11:57,298 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 0/1 selected
+17:11:57,298 DEBUG ManagedSelector:createEndPoint:416 - Created SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=0}
+17:11:57,298 DEBUG ManagedSelector:runChange:214 - Running change SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=0}:runUpdateKey
+17:11:57,298 DEBUG ExecuteProduceConsume:produceAndRun:215 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db ran org.eclipse.jetty.io.ManagedSelector$CreateEndPoint@3ef6f3ab
+17:11:57,298 DEBUG SelectChannelEndPoint:updateKey:214 - Key interests updated 0 -> 1 on SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=1/1,kio=1,kro=0}
+17:11:57,298 DEBUG ExecuteProduceConsume:produceAndRun:228 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db produce exit
+17:11:57,298 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,299 DEBUG QueuedThreadPool:run:574 - ran org.eclipse.jetty.io.ManagedSelector@3cef309d id=0 keys=1 selected=0
+17:11:57,299 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 1/1 selected
+17:11:57,299 DEBUG SelectChannelEndPoint:onSelected:159 - onSelected 1->0 r=true w=false for SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,3/30000,HttpConnection}{io=1/0,kio=1,kro=1}
+17:11:57,299 DEBUG SelectChannelEndPoint:onSelected:186 - task SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,3/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,299 DEBUG ExecuteProduceConsume:produceAndRun:165 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db produced SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,3/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,299 DEBUG ExecuteProduceConsume:produceAndRun:206 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db dispatch
+17:11:57,299 DEBUG QueuedThreadPool:execute:373 - queue EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db
+17:11:57,300 DEBUG QueuedThreadPool:run:571 - run EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db
+17:11:57,300 DEBUG ExecuteProduceConsume:produceAndRun:212 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db run SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,3/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,300 DEBUG ExecuteProduceConsume:run:125 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db run
+17:11:57,300 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db produce enter
+17:11:57,300 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db producing
+17:11:57,300 DEBUG SelectChannelEndPoint:updateKey:214 - Key interests updated 1 -> 0 on SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,300 DEBUG FillInterest:fillable:93 - FillInterest@21a39b75{true,AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,4/30000,HttpConnection}{io=1/0,kio=1,kro=1}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}]}} fillable AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,4/30000,HttpConnection}{io=0/0,kio=1,kro=1}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}]}
+17:11:57,300 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,301 DEBUG HttpConnection:onFillable:215 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}] onFillable enter HttpChannelState@43275bd9{s=IDLE a=null i=true r=!P!U w=false} null
+17:11:57,301 DEBUG ChannelEndPoint:fill:147 - filled 149 SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,5/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,301 DEBUG HttpConnection:fillRequestBuffer:322 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}] filled 149 HeapByteBuffer@ee4b8b5[p=0,l=149,c=8192,r=149]={<<<GET / HTTP/1.1\r\nH...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,301 DEBUG HttpConnection:parseRequestBuffer:339 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=0,c=false,a=IDLE,uri=null}] parse HeapByteBuffer@ee4b8b5[p=0,l=149,c=8192,r=149]={<<<GET / HTTP/1.1\r\nH...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+17:11:57,302 DEBUG HttpParser:parseNext:1163 - parseNext s=START HeapByteBuffer@ee4b8b5[p=0,l=149,c=8192,r=149]={<<<GET / HTTP/1.1\r\nH...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,302 DEBUG HttpParser:setState:1542 - START --> SPACE1
+17:11:57,302 DEBUG HttpParser:setState:1542 - SPACE1 --> URI
+17:11:57,302 DEBUG HttpParser:setState:1542 - URI --> SPACE2
+17:11:57,302 DEBUG HttpParser:setState:1542 - SPACE2 --> REQUEST_VERSION
+17:11:57,302 DEBUG HttpParser:setState:1542 - REQUEST_VERSION --> HEADER
+17:11:57,302 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_VALUE
+17:11:57,302 DEBUG HttpParser:setState:1542 - HEADER_VALUE --> HEADER_IN_VALUE
+17:11:57,303 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,303 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,303 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,303 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_VALUE
+17:11:57,303 DEBUG HttpParser:setState:1542 - HEADER_VALUE --> HEADER_IN_VALUE
+17:11:57,303 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,303 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,303 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,303 DEBUG HttpParser:setState:1542 - HEADER --> END
+17:11:57,303 DEBUG HttpChannel:onRequestComplete:602 - HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=//localhost:8889/} onRequestComplete
+17:11:57,304 DEBUG HttpInput:addContent:385 - HttpInputOverHTTP@234719[c=0,s=STREAM] addContent EOF
+17:11:57,304 DEBUG HttpConnection:parseRequestBuffer:344 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=END,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=//localhost:8889/}] parsed true HttpParser{s=END,0 of 0}
+17:11:57,304 DEBUG HttpConnection:releaseRequestBuffer:192 - releaseRequestBuffer HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=END,0 of 0},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=//localhost:8889/}]
+17:11:57,304 DEBUG HttpChannel:handle:271 - HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=//localhost:8889/} handle //localhost:8889/ 
+17:11:57,305 DEBUG HttpChannelState:handling:188 - HttpChannelState@43275bd9{s=IDLE a=null i=true r=!P!U w=false} handling IDLE
+17:11:57,305 DEBUG HttpChannel:handle:284 - HttpChannelOverHttp@4ac58281{r=1,c=false,a=DISPATCHED,uri=//localhost:8889/} action DISPATCH
+17:11:57,305 DEBUG Server:handle:506 - REQUEST on HttpChannelOverHttp@4ac58281{r=1,c=false,a=DISPATCHED,uri=//localhost:8889/}
+GET //localhost:8889/
+Host: localhost:8889
+Connection: keep-alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)
+Accept-Encoding: gzip,deflate
+
+
+17:11:57,305 DEBUG ServletHandler:doScope:497 - servlet null|/|null -> org.example.handlers.TransportServlet-3701eaf6@a6dd0fcb==org.example.handlers.TransportServlet,-1,false
+17:11:57,305 DEBUG ServletHandler:doHandle:560 - chain=null
+17:11:57,305 DEBUG ServletHolder:initServlet:639 - Servlet.init org.example.handlers.TransportServlet@41cd3c5 for org.example.handlers.TransportServlet-3701eaf6
+17:11:57,305 DEBUG HttpChannel:commit:703 - Commit HTTP/1.1{s=302,h=2} to HttpChannelOverHttp@4ac58281{r=1,c=true,a=DISPATCHED,uri=//localhost:8889/}
+17:11:57,306 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@411e4d22[PROCESSING][i=HTTP/1.1{s=302,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@6a1464a4] generate: NEED_HEADER (null,[p=0,l=0,c=0,r=0],true)@START
+17:11:57,306 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@411e4d22[PROCESSING][i=HTTP/1.1{s=302,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@6a1464a4] generate: FLUSH ([p=0,l=151,c=8192,r=151],[p=0,l=0,c=0,r=0],true)@COMPLETING
+17:11:57,306 DEBUG WriteFlusher:write:306 - write: WriteFlusher@7095ed70{IDLE} [HeapByteBuffer@ee4b8b5[p=0,l=151,c=8192,r=151]={<<<HTTP/1.1 302 Foun....v20160115)\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+17:11:57,306 DEBUG WriteFlusher:updateState:117 - update WriteFlusher@7095ed70{WRITING}:IDLE-->WRITING
+17:11:57,307 DEBUG wire:wire:72 - http-outgoing-1 << "HTTP/1.1 302 Found[\r][\n]"
+17:11:57,307 DEBUG ChannelEndPoint:flush:193 - flushed 151 SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,W,6/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,307 DEBUG wire:wire:72 - http-outgoing-1 << "Date: Thu, 14 May 2020 14:11:57 GMT[\r][\n]"
+17:11:57,307 DEBUG WriteFlusher:flush:423 - Flushed=true 151/151+0 WriteFlusher@7095ed70{WRITING}
+17:11:57,307 DEBUG wire:wire:72 - http-outgoing-1 << "Location: http://localhost:8889/convert[\r][\n]"
+17:11:57,307 DEBUG WriteFlusher:updateState:117 - update WriteFlusher@7095ed70{IDLE}:WRITING-->IDLE
+17:11:57,307 DEBUG wire:wire:72 - http-outgoing-1 << "Content-Length: 0[\r][\n]"
+17:11:57,308 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@411e4d22[PROCESSING][i=HTTP/1.1{s=302,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@6a1464a4] generate: DONE ([p=151,l=151,c=8192,r=0],[p=0,l=0,c=0,r=0],true)@END
+17:11:57,308 DEBUG wire:wire:72 - http-outgoing-1 << "Server: Jetty(9.3.7.v20160115)[\r][\n]"
+17:11:57,308 DEBUG Server:handle:520 - RESPONSE for / h=true
+302 null
+Date: Thu, 14 May 2020 14:11:57 GMT
+Location: http://localhost:8889/convert
+
+
+17:11:57,308 DEBUG wire:wire:72 - http-outgoing-1 << "[\r][\n]"
+17:11:57,308 DEBUG HttpChannelState:unhandle:331 - HttpChannelState@43275bd9{s=DISPATCHED a=null i=true r=!P!U w=false} unhandle DISPATCHED
+17:11:57,308 DEBUG headers:onResponseReceived:124 - http-outgoing-1 << HTTP/1.1 302 Found
+17:11:57,308 DEBUG HttpChannel:handle:284 - HttpChannelOverHttp@4ac58281{r=1,c=true,a=COMPLETING,uri=//localhost:8889/} action COMPLETE
+17:11:57,308 DEBUG headers:onResponseReceived:127 - http-outgoing-1 << Date: Thu, 14 May 2020 14:11:57 GMT
+17:11:57,308 DEBUG HttpParser:reset:1522 - reset HttpParser{s=END,0 of 0}
+17:11:57,309 DEBUG headers:onResponseReceived:127 - http-outgoing-1 << Location: http://localhost:8889/convert
+17:11:57,309 DEBUG HttpParser:setState:1542 - END --> START
+17:11:57,309 DEBUG headers:onResponseReceived:127 - http-outgoing-1 << Content-Length: 0
+17:11:57,309 DEBUG HttpChannel:handle:479 - HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null} handle exit, result COMPLETE
+17:11:57,309 DEBUG headers:onResponseReceived:127 - http-outgoing-1 << Server: Jetty(9.3.7.v20160115)
+17:11:57,309 DEBUG MainClientExec:execute:284 - Connection can be kept alive indefinitely
+17:11:57,309 DEBUG ChannelEndPoint:fill:147 - filled 0 SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,309 DEBUG PoolingHttpClientConnectionManager:releaseConnection:314 - Connection [id: 1][route: {}->http://localhost:8889] can be kept alive indefinitely
+17:11:57,310 DEBUG ChannelEndPoint:fill:147 - filled 0 SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,310 DEBUG PoolingHttpClientConnectionManager:releaseConnection:320 - Connection released: [id: 1][route: {}->http://localhost:8889][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+17:11:57,310 DEBUG DefaultRedirectStrategy:getLocationURI:142 - Redirect requested to location 'http://localhost:8889/convert'
+17:11:57,310 DEBUG HttpConnection:fillRequestBuffer:322 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}] filled 0 HeapByteBuffer@ee4b8b5[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 302 Foun...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,310 DEBUG RedirectExec:execute:159 - Redirecting to 'http://localhost:8889/convert' via {}->http://localhost:8889
+17:11:57,310 DEBUG RequestAddCookies:process:122 - CookieSpec selected: default
+17:11:57,310 DEBUG HttpConnection:parseRequestBuffer:339 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}] parse HeapByteBuffer@ee4b8b5[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 302 Foun...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+17:11:57,310 DEBUG RequestAuthCache:process:76 - Auth cache not set in the context
+17:11:57,310 DEBUG HttpParser:parseNext:1163 - parseNext s=START HeapByteBuffer@ee4b8b5[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 302 Foun...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,311 DEBUG PoolingHttpClientConnectionManager:requestConnection:249 - Connection request: [route: {}->http://localhost:8889][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+17:11:57,311 DEBUG PoolingHttpClientConnectionManager:leaseConnection:282 - Connection leased: [id: 1][route: {}->http://localhost:8889][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+17:11:57,311 DEBUG HttpConnection:parseRequestBuffer:344 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}] parsed false HttpParser{s=START,0 of -1}
+17:11:57,311 DEBUG MainClientExec:execute:255 - Executing request GET /convert HTTP/1.1
+17:11:57,311 DEBUG MainClientExec:execute:260 - Target auth state: UNCHALLENGED
+17:11:57,311 DEBUG MainClientExec:execute:266 - Proxy auth state: UNCHALLENGED
+17:11:57,311 DEBUG HttpConnection:releaseRequestBuffer:192 - releaseRequestBuffer HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}]
+17:11:57,311 DEBUG headers:onRequestSubmitted:135 - http-outgoing-1 >> GET /convert HTTP/1.1
+17:11:57,311 DEBUG headers:onRequestSubmitted:138 - http-outgoing-1 >> Host: localhost:8889
+17:11:57,311 DEBUG headers:onRequestSubmitted:138 - http-outgoing-1 >> Connection: Keep-Alive
+17:11:57,311 DEBUG AbstractConnection:fillInterested:141 - fillInterested HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}]
+17:11:57,311 DEBUG headers:onRequestSubmitted:138 - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)
+17:11:57,312 DEBUG headers:onRequestSubmitted:138 - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+17:11:57,312 DEBUG wire:wire:72 - http-outgoing-1 >> "GET /convert HTTP/1.1[\r][\n]"
+17:11:57,312 DEBUG wire:wire:72 - http-outgoing-1 >> "Host: localhost:8889[\r][\n]"
+17:11:57,312 DEBUG wire:wire:72 - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+17:11:57,312 DEBUG FillInterest:register:63 - FillInterest@21a39b75{true,AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}]}
+17:11:57,312 DEBUG wire:wire:72 - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)[\r][\n]"
+17:11:57,312 DEBUG wire:wire:72 - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+17:11:57,312 DEBUG wire:wire:72 - http-outgoing-1 >> "[\r][\n]"
+17:11:57,313 DEBUG FillInterest:register:77 - FillInterest@21a39b75{true,AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}]}
+17:11:57,313 DEBUG SelectChannelEndPoint:changeInterests:248 - changeInterests p=false 0->1 for SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/1,kio=0,kro=1}
+17:11:57,313 DEBUG ManagedSelector:submit:116 - Queued change SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/1,kio=0,kro=1}:runUpdateKey on org.eclipse.jetty.io.ManagedSelector@3cef309d id=0 keys=1 selected=0
+17:11:57,313 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 0/1 selected
+17:11:57,313 DEBUG HttpConnection:onFillable:262 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/1,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}] onFillable exit HttpChannelState@43275bd9{s=IDLE a=null i=true r=!P!U w=false} null
+17:11:57,313 DEBUG ManagedSelector:runChange:214 - Running change SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/1,kio=0,kro=1}:runUpdateKey
+17:11:57,314 DEBUG ExecuteProduceConsume:produceAndRun:215 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db ran SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=1/1,kio=0,kro=1}:runFillable
+17:11:57,314 DEBUG SelectChannelEndPoint:updateKey:214 - Key interests updated 0 -> 1 on SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=1/1,kio=1,kro=1}
+17:11:57,314 DEBUG ExecuteProduceConsume:produceAndRun:228 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db produce exit
+17:11:57,314 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,314 DEBUG QueuedThreadPool:run:574 - ran EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db
+17:11:57,314 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 1/1 selected
+17:11:57,314 DEBUG SelectChannelEndPoint:onSelected:159 - onSelected 1->0 r=true w=false for SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=1/0,kio=1,kro=1}
+17:11:57,314 DEBUG SelectChannelEndPoint:onSelected:186 - task SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,314 DEBUG ExecuteProduceConsume:produceAndRun:165 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db produced SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,315 DEBUG ExecuteProduceConsume:produceAndRun:206 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db dispatch
+17:11:57,315 DEBUG QueuedThreadPool:execute:373 - queue EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db
+17:11:57,315 DEBUG QueuedThreadPool:run:571 - run EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db
+17:11:57,315 DEBUG ExecuteProduceConsume:produceAndRun:212 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db run SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,3/30000,HttpConnection}{io=1/0,kio=1,kro=1}:runFillable
+17:11:57,315 DEBUG ExecuteProduceConsume:run:125 - EPR Pend/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db run
+17:11:57,315 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db produce enter
+17:11:57,315 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db producing
+17:11:57,315 DEBUG SelectChannelEndPoint:updateKey:214 - Key interests updated 1 -> 0 on SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,315 DEBUG FillInterest:fillable:93 - FillInterest@21a39b75{true,AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,3/30000,HttpConnection}{io=1/0,kio=1,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}]}} fillable AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}]}
+17:11:57,316 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:57,316 DEBUG HttpConnection:onFillable:215 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}] onFillable enter HttpChannelState@43275bd9{s=IDLE a=null i=true r=!P!U w=false} null
+17:11:57,316 DEBUG ChannelEndPoint:fill:147 - filled 156 SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,316 DEBUG HttpConnection:fillRequestBuffer:322 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}] filled 156 HeapByteBuffer@ee4b8b5[p=0,l=156,c=8192,r=156]={<<<GET /convert HTTP...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,317 DEBUG HttpConnection:parseRequestBuffer:339 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=1,c=false,a=IDLE,uri=null}] parse HeapByteBuffer@ee4b8b5[p=0,l=156,c=8192,r=156]={<<<GET /convert HTTP...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+17:11:57,317 DEBUG HttpParser:parseNext:1163 - parseNext s=START HeapByteBuffer@ee4b8b5[p=0,l=156,c=8192,r=156]={<<<GET /convert HTTP...zip,deflate\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,317 DEBUG HttpParser:setState:1542 - START --> SPACE1
+17:11:57,317 DEBUG HttpParser:setState:1542 - SPACE1 --> URI
+17:11:57,317 DEBUG HttpParser:setState:1542 - URI --> SPACE2
+17:11:57,317 DEBUG HttpParser:setState:1542 - SPACE2 --> REQUEST_VERSION
+17:11:57,317 DEBUG HttpParser:setState:1542 - REQUEST_VERSION --> HEADER
+17:11:57,317 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,317 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,317 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,318 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,318 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,318 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,318 DEBUG HttpParser:setState:1542 - HEADER --> HEADER_IN_VALUE
+17:11:57,318 DEBUG HttpParser:setState:1542 - HEADER_IN_VALUE --> HEADER
+17:11:57,318 DEBUG HttpParser:setState:1542 - HEADER --> END
+17:11:57,318 DEBUG HttpChannel:onRequestComplete:602 - HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=//localhost:8889/convert} onRequestComplete
+17:11:57,318 DEBUG HttpInput:addContent:385 - HttpInputOverHTTP@234719[c=0,s=STREAM] addContent EOF
+17:11:57,318 DEBUG HttpConnection:parseRequestBuffer:344 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=END,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=//localhost:8889/convert}] parsed true HttpParser{s=END,0 of -1}
+17:11:57,319 DEBUG HttpConnection:releaseRequestBuffer:192 - releaseRequestBuffer HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=END,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=//localhost:8889/convert}]
+17:11:57,319 DEBUG HttpChannel:handle:271 - HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=//localhost:8889/convert} handle //localhost:8889/convert 
+17:11:57,319 DEBUG HttpChannelState:handling:188 - HttpChannelState@43275bd9{s=IDLE a=null i=true r=!P!U w=false} handling IDLE
+17:11:57,319 DEBUG HttpChannel:handle:284 - HttpChannelOverHttp@4ac58281{r=2,c=false,a=DISPATCHED,uri=//localhost:8889/convert} action DISPATCH
+17:11:57,319 DEBUG Server:handle:506 - REQUEST on HttpChannelOverHttp@4ac58281{r=2,c=false,a=DISPATCHED,uri=//localhost:8889/convert}
+GET //localhost:8889/convert
+Host: localhost:8889
+Connection: keep-alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_241)
+Accept-Encoding: gzip,deflate
+
+
+17:11:57,319 DEBUG ServletHandler:doScope:497 - servlet null|/convert|null -> org.example.handlers.MainServlet-5c5a1b69@a039fdc6==org.example.handlers.MainServlet,-1,false
+17:11:57,319 DEBUG ServletHandler:doHandle:560 - chain=null
+17:11:57,319 DEBUG ServletHolder:initServlet:639 - Servlet.init org.example.handlers.MainServlet@472fbd98 for org.example.handlers.MainServlet-5c5a1b69
+17:11:57,320 DEBUG Server:handle:520 - RESPONSE for /convert h=true
+200 null
+Date: Thu, 14 May 2020 14:11:57 GMT
+Content-Type: application/json
+
+
+17:11:57,320 DEBUG HttpChannelState:unhandle:331 - HttpChannelState@43275bd9{s=DISPATCHED a=null i=true r=!P!U w=false} unhandle DISPATCHED
+17:11:57,320 DEBUG HttpChannel:handle:284 - HttpChannelOverHttp@4ac58281{r=2,c=false,a=COMPLETING,uri=//localhost:8889/convert} action COMPLETE
+17:11:57,320 DEBUG HttpChannel:commit:703 - Commit HTTP/1.1{s=200,h=2} to HttpChannelOverHttp@4ac58281{r=2,c=true,a=COMPLETING,uri=//localhost:8889/convert}
+17:11:57,320 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@411e4d22[PROCESSING][i=HTTP/1.1{s=200,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@49e85b0d] generate: NEED_HEADER (null,[p=0,l=22,c=32768,r=22],true)@START
+17:11:57,320 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@411e4d22[PROCESSING][i=HTTP/1.1{s=200,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@49e85b0d] generate: FLUSH ([p=0,l=140,c=8192,r=140],[p=0,l=22,c=32768,r=22],true)@COMPLETING
+17:11:57,321 DEBUG WriteFlusher:write:306 - write: WriteFlusher@7095ed70{IDLE} [HeapByteBuffer@ee4b8b5[p=0,l=140,c=8192,r=140]={<<<HTTP/1.1 200 OK\r\n....v20160115)\r\n\r\n>>>gzip,deflate\r\n\r\n\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00},DirectByteBuffer@4dd7d6e8[p=0,l=22,c=32768,r=22]={<<<{\n  "status": "OK"\n}\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+17:11:57,321 DEBUG WriteFlusher:updateState:117 - update WriteFlusher@7095ed70{WRITING}:IDLE-->WRITING
+17:11:57,321 DEBUG wire:wire:72 - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+17:11:57,321 DEBUG ChannelEndPoint:flush:193 - flushed 162 SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,W,5/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,321 DEBUG wire:wire:72 - http-outgoing-1 << "Date: Thu, 14 May 2020 14:11:57 GMT[\r][\n]"
+17:11:57,321 DEBUG WriteFlusher:flush:423 - Flushed=true 140/140+1 WriteFlusher@7095ed70{WRITING}
+17:11:57,322 DEBUG wire:wire:72 - http-outgoing-1 << "Content-Type: application/json[\r][\n]"
+17:11:57,322 DEBUG WriteFlusher:updateState:117 - update WriteFlusher@7095ed70{IDLE}:WRITING-->IDLE
+17:11:57,322 DEBUG wire:wire:72 - http-outgoing-1 << "Content-Length: 22[\r][\n]"
+17:11:57,322 DEBUG HttpConnection:process:680 - org.eclipse.jetty.server.HttpConnection$SendCallback@411e4d22[PROCESSING][i=HTTP/1.1{s=200,h=2},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@49e85b0d] generate: DONE ([p=140,l=140,c=8192,r=0],[p=22,l=22,c=32768,r=0],true)@END
+17:11:57,322 DEBUG wire:wire:72 - http-outgoing-1 << "Server: Jetty(9.3.7.v20160115)[\r][\n]"
+17:11:57,322 DEBUG wire:wire:72 - http-outgoing-1 << "[\r][\n]"
+17:11:57,322 DEBUG HttpParser:reset:1522 - reset HttpParser{s=END,0 of -1}
+17:11:57,322 DEBUG wire:wire:72 - http-outgoing-1 << "{[\n]"
+17:11:57,322 DEBUG HttpParser:setState:1542 - END --> START
+17:11:57,322 DEBUG wire:wire:72 - http-outgoing-1 << "  "status": "OK"[\n]"
+17:11:57,323 DEBUG HttpChannel:handle:479 - HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null} handle exit, result COMPLETE
+17:11:57,323 DEBUG wire:wire:72 - http-outgoing-1 << "}[\r][\n]"
+17:11:57,323 DEBUG ChannelEndPoint:fill:147 - filled 0 SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,323 DEBUG headers:onResponseReceived:124 - http-outgoing-1 << HTTP/1.1 200 OK
+17:11:57,323 DEBUG headers:onResponseReceived:127 - http-outgoing-1 << Date: Thu, 14 May 2020 14:11:57 GMT
+17:11:57,323 DEBUG ChannelEndPoint:fill:147 - filled 0 SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}
+17:11:57,323 DEBUG headers:onResponseReceived:127 - http-outgoing-1 << Content-Type: application/json
+17:11:57,323 DEBUG headers:onResponseReceived:127 - http-outgoing-1 << Content-Length: 22
+17:11:57,323 DEBUG headers:onResponseReceived:127 - http-outgoing-1 << Server: Jetty(9.3.7.v20160115)
+17:11:57,323 DEBUG HttpConnection:fillRequestBuffer:322 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,2/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null}] filled 0 HeapByteBuffer@ee4b8b5[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,324 DEBUG MainClientExec:execute:284 - Connection can be kept alive indefinitely
+17:11:57,324 DEBUG HttpConnection:parseRequestBuffer:339 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null}] parse HeapByteBuffer@ee4b8b5[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+17:11:57,324 DEBUG HttpParser:parseNext:1163 - parseNext s=START HeapByteBuffer@ee4b8b5[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+17:11:57,324 DEBUG HttpConnection:parseRequestBuffer:344 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null}] parsed false HttpParser{s=START,0 of -1}
+17:11:57,325 DEBUG HttpConnection:releaseRequestBuffer:192 - releaseRequestBuffer HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,3/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null}]
+17:11:57,325 DEBUG AbstractConnection:fillInterested:141 - fillInterested HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,-,-,4/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null}]
+17:11:57,325 DEBUG RequestAddCookies:process:122 - CookieSpec selected: default
+17:11:57,325 DEBUG RequestAuthCache:process:76 - Auth cache not set in the context
+17:11:57,325 DEBUG PoolingHttpClientConnectionManager:requestConnection:249 - Connection request: [route: {}->http://localhost:8890][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+17:11:57,325 DEBUG FillInterest:register:63 - FillInterest@21a39b75{true,AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,0/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null}]}
+17:11:57,326 DEBUG PoolingHttpClientConnectionManager:leaseConnection:282 - Connection leased: [id: 2][route: {}->http://localhost:8890][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+17:11:57,326 DEBUG MainClientExec:execute:234 - Opening connection {}->http://localhost:8890
+17:11:57,326 DEBUG DefaultHttpClientConnectionOperator:connect:138 - Connecting to localhost/127.0.0.1:8890
+17:11:57,326 DEBUG FillInterest:register:77 - FillInterest@21a39b75{true,AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null}]}} register AC.ReadCB@1bdb855e{HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/0,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null}]}
+17:11:57,326 DEBUG SelectChannelEndPoint:changeInterests:248 - changeInterests p=false 0->1 for SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,1/30000,HttpConnection}{io=0/1,kio=0,kro=1}
+17:11:57,327 DEBUG ManagedSelector:submit:116 - Queued change SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=1}:runUpdateKey on org.eclipse.jetty.io.ManagedSelector@3cef309d id=0 keys=1 selected=0
+17:11:57,327 DEBUG ManagedSelector:select:234 - Selector loop woken up from select, 0/1 selected
+17:11:57,327 DEBUG HttpConnection:onFillable:262 - HttpConnection@1bdb855e[SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=1}][p=HttpParser{s=START,0 of -1},g=HttpGenerator@4794d88c{s=START},c=HttpChannelOverHttp@4ac58281{r=2,c=false,a=IDLE,uri=null}] onFillable exit HttpChannelState@43275bd9{s=IDLE a=null i=true r=!P!U w=false} null
+17:11:57,327 DEBUG ExecuteProduceConsume:produceAndRun:215 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db ran SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=1}:runFillable
+17:11:57,328 DEBUG ExecuteProduceConsume:produceAndRun:228 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db produce exit
+17:11:57,327 DEBUG ManagedSelector:runChange:214 - Running change SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,2/30000,HttpConnection}{io=0/1,kio=0,kro=1}:runUpdateKey
+17:11:57,328 DEBUG QueuedThreadPool:run:574 - ran EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@340e98db
+17:11:57,328 DEBUG SelectChannelEndPoint:updateKey:214 - Key interests updated 0 -> 1 on SelectChannelEndPoint@7bf47a11{/127.0.0.1:50487<->8889,Open,in,out,FI,-,3/30000,HttpConnection}{io=1/1,kio=1,kro=1}
+17:11:57,328 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:11:59,327 DEBUG DefaultHttpClientConnectionOperator:connect:167 - Connect to localhost/127.0.0.1:8890 timed out. Connection will be retried using another IP address
+17:11:59,327 DEBUG DefaultHttpClientConnectionOperator:connect:138 - Connecting to localhost/0:0:0:0:0:0:0:1:8890
+17:12:01,329 DEBUG DefaultManagedHttpClientConnection:shutdown:98 - http-outgoing-2: Shutdown connection
+17:12:01,329 DEBUG MainClientExec:abortConnection:128 - Connection discarded
+17:12:01,329 DEBUG PoolingHttpClientConnectionManager:releaseConnection:320 - Connection released: [id: 2][route: {}->http://localhost:8890][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+17:12:01,331 DEBUG RequestAddCookies:process:122 - CookieSpec selected: default
+17:12:01,331 DEBUG RequestAuthCache:process:76 - Auth cache not set in the context
+17:12:01,331 DEBUG PoolingHttpClientConnectionManager:requestConnection:249 - Connection request: [route: {}->http://localhost:8891][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+17:12:01,331 DEBUG PoolingHttpClientConnectionManager:leaseConnection:282 - Connection leased: [id: 3][route: {}->http://localhost:8891][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+17:12:01,331 DEBUG MainClientExec:execute:234 - Opening connection {}->http://localhost:8891
+17:12:01,331 DEBUG DefaultHttpClientConnectionOperator:connect:138 - Connecting to localhost/127.0.0.1:8891
+17:12:03,336 DEBUG DefaultHttpClientConnectionOperator:connect:167 - Connect to localhost/127.0.0.1:8891 timed out. Connection will be retried using another IP address
+17:12:03,336 DEBUG DefaultHttpClientConnectionOperator:connect:138 - Connecting to localhost/0:0:0:0:0:0:0:1:8891
+17:12:05,337 DEBUG DefaultManagedHttpClientConnection:shutdown:98 - http-outgoing-3: Shutdown connection
+17:12:05,337 DEBUG MainClientExec:abortConnection:128 - Connection discarded
+17:12:05,337 DEBUG PoolingHttpClientConnectionManager:releaseConnection:320 - Connection released: [id: 3][route: {}->http://localhost:8891][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+17:12:05,338 DEBUG RequestAddCookies:process:122 - CookieSpec selected: default
+17:12:05,339 DEBUG RequestAuthCache:process:76 - Auth cache not set in the context
+17:12:05,339 DEBUG PoolingHttpClientConnectionManager:requestConnection:249 - Connection request: [route: {}->http://localhost:8892][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+17:12:05,339 DEBUG PoolingHttpClientConnectionManager:leaseConnection:282 - Connection leased: [id: 4][route: {}->http://localhost:8892][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+17:12:05,339 DEBUG MainClientExec:execute:234 - Opening connection {}->http://localhost:8892
+17:12:05,339 DEBUG DefaultHttpClientConnectionOperator:connect:138 - Connecting to localhost/127.0.0.1:8892
+17:12:07,341 DEBUG DefaultHttpClientConnectionOperator:connect:167 - Connect to localhost/127.0.0.1:8892 timed out. Connection will be retried using another IP address
+17:12:07,341 DEBUG DefaultHttpClientConnectionOperator:connect:138 - Connecting to localhost/0:0:0:0:0:0:0:1:8892
+17:12:09,345 DEBUG DefaultManagedHttpClientConnection:shutdown:98 - http-outgoing-4: Shutdown connection
+17:12:09,345 DEBUG MainClientExec:abortConnection:128 - Connection discarded
+17:12:09,345 DEBUG PoolingHttpClientConnectionManager:releaseConnection:320 - Connection released: [id: 4][route: {}->http://localhost:8892][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+17:12:09,346 DEBUG RequestAddCookies:process:122 - CookieSpec selected: default
+17:12:09,347 DEBUG RequestAuthCache:process:76 - Auth cache not set in the context
+17:12:09,347 DEBUG PoolingHttpClientConnectionManager:requestConnection:249 - Connection request: [route: {}->http://localhost:8893][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+17:12:09,347 DEBUG PoolingHttpClientConnectionManager:leaseConnection:282 - Connection leased: [id: 5][route: {}->http://localhost:8893][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+17:12:09,347 DEBUG MainClientExec:execute:234 - Opening connection {}->http://localhost:8893
+17:12:09,347 DEBUG DefaultHttpClientConnectionOperator:connect:138 - Connecting to localhost/127.0.0.1:8893
+17:12:11,349 DEBUG DefaultHttpClientConnectionOperator:connect:167 - Connect to localhost/127.0.0.1:8893 timed out. Connection will be retried using another IP address
+17:12:11,349 DEBUG DefaultHttpClientConnectionOperator:connect:138 - Connecting to localhost/0:0:0:0:0:0:0:1:8893
+17:12:13,352 DEBUG DefaultManagedHttpClientConnection:shutdown:98 - http-outgoing-5: Shutdown connection
+17:12:13,352 DEBUG MainClientExec:abortConnection:128 - Connection discarded
+17:12:13,352 DEBUG PoolingHttpClientConnectionManager:releaseConnection:320 - Connection released: [id: 5][route: {}->http://localhost:8893][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+17:12:13,353 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@7fc81c43 added {qtp468335925{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:12:13,353 DEBUG ContainerLifeCycle:addBean:323 - HttpConnectionFactory@cea086e[HTTP/1.1] added {HttpConfiguration@434cd983{32768/8192,8192/8192,https://:0,[]},POJO}
+17:12:13,353 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3610783d{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@7fc81c43,UNMANAGED}
+17:12:13,353 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3610783d{null,[]}{0.0.0.0:0} added {qtp468335925{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:12:13,353 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3610783d{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@985474a,AUTO}
+17:12:13,353 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3610783d{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@6a65afe9,POJO}
+17:12:13,354 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3610783d{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@cea086e[HTTP/1.1],AUTO}
+17:12:13,354 DEBUG ServerConnector:addConnectionFactory:396 - ServerConnector@3610783d{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@cea086e[HTTP/1.1]
+17:12:13,354 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3610783d{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@4fc0f3e7,MANAGED}
+17:12:13,354 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@7fc81c43 added {ServerConnector@3610783d{HTTP/1.1,[http/1.1]}{0.0.0.0:8890},AUTO}
+17:12:13,354 DEBUG DecoratedObjectFactory:addDecorator:52 - Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@6cdc4242
+17:12:13,354 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@59b80e74 added {org.eclipse.jetty.server.session.HashSessionManager@1e65e84d,AUTO}
+17:12:13,355 DEBUG ContainerLifeCycle:addBean:323 - o.e.j.s.ServletContextHandler@56f27fad{/,null,null} added {org.eclipse.jetty.server.session.SessionHandler@59b80e74,MANAGED}
+17:12:13,355 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@59b80e74 added {org.eclipse.jetty.servlet.ServletHandler@58b2f963,MANAGED}
+17:12:13,355 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@7fc81c43 added {o.e.j.s.ServletContextHandler@56f27fad{http//localhost,null,null},MANAGED}
+17:12:13,355 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@7fc81c43 added {org.eclipse.jetty.servlet.ServletHandler@416097af,MANAGED}
+17:12:13,355 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@416097af added {org.example.handlers.MainServlet-7076384e@e72a9326==org.example.handlers.MainServlet,-1,false,AUTO}
+17:12:13,355 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@416097af added {[/convert]=>org.example.handlers.MainServlet-7076384e,POJO}
+17:12:13,355 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@416097af added {org.example.handlers.TransportServlet-353c2efa@44d89a9a==org.example.handlers.TransportServlet,-1,false,AUTO}
+17:12:13,355 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@416097af added {[/]=>org.example.handlers.TransportServlet-353c2efa,POJO}
+17:12:13,355 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.Server@7fc81c43
+17:12:13,356  INFO Server:doStart:345 - jetty-9.3.7.v20160115
+17:12:13,356 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.server.Server@7fc81c43
+17:12:13,356 DEBUG AbstractLifeCycle:setStarting:185 - starting qtp468335925{STOPPED,8<=0<=200,i=0,q=0}
+17:12:13,357 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17598ms qtp468335925{STARTED,8<=8<=200,i=6,q=0}
+17:12:13,357 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.servlet.ServletHandler@416097af
+17:12:13,357 DEBUG ServletHandler:updateMappings:1511 - Chose path=/convert mapped to servlet=org.example.handlers.MainServlet-7076384e from default=false
+17:12:13,357 DEBUG ServletHandler:updateMappings:1511 - Chose path=/ mapped to servlet=org.example.handlers.TransportServlet-353c2efa from default=false
+17:12:13,358 DEBUG ServletHandler:updateMappings:1532 - filterNameMap={}
+17:12:13,358 DEBUG ServletHandler:updateMappings:1533 - pathFilters=null
+17:12:13,358 DEBUG ServletHandler:updateMappings:1534 - servletFilterMap=null
+17:12:13,358 DEBUG ServletHandler:updateMappings:1535 - servletPathMap={/convert=org.example.handlers.MainServlet-7076384e@e72a9326==org.example.handlers.MainServlet,-1,false, /=org.example.handlers.TransportServlet-353c2efa@44d89a9a==org.example.handlers.TransportServlet,-1,false}
+17:12:13,358 DEBUG ServletHandler:updateMappings:1536 - servletNameMap={org.example.handlers.TransportServlet-353c2efa=org.example.handlers.TransportServlet-353c2efa@44d89a9a==org.example.handlers.TransportServlet,-1,false, org.example.handlers.MainServlet-7076384e=org.example.handlers.MainServlet-7076384e@e72a9326==org.example.handlers.MainServlet,-1,false}
+17:12:13,358 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.MainServlet-7076384e@e72a9326==org.example.handlers.MainServlet,-1,false
+17:12:13,358 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17599ms org.example.handlers.MainServlet-7076384e@e72a9326==org.example.handlers.MainServlet,-1,false
+17:12:13,358 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.TransportServlet-353c2efa@44d89a9a==org.example.handlers.TransportServlet,-1,false
+17:12:13,358 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17599ms org.example.handlers.TransportServlet-353c2efa@44d89a9a==org.example.handlers.TransportServlet,-1,false
+17:12:13,359 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.servlet.ServletHandler@416097af
+17:12:13,359 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17599ms org.eclipse.jetty.servlet.ServletHandler@416097af
+17:12:13,359 DEBUG AbstractLifeCycle:setStarting:185 - starting ServerConnector@3610783d{HTTP/1.1,[http/1.1]}{0.0.0.0:8890}
+17:12:13,359 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3610783d{HTTP/1.1,[http/1.1]}{0.0.0.0:8890} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8890],POJO}
+17:12:13,359 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@985474a
+17:12:13,359 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17600ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@985474a
+17:12:13,359 DEBUG AbstractLifeCycle:setStarting:185 - starting HttpConnectionFactory@cea086e[HTTP/1.1]
+17:12:13,360 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17600ms HttpConnectionFactory@cea086e[HTTP/1.1]
+17:12:13,360 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@4fc0f3e7
+17:12:13,360 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@46061ac id=0 keys=-1 selected=-1
+17:12:13,361 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17601ms org.eclipse.jetty.io.ManagedSelector@46061ac id=0 keys=0 selected=0
+17:12:13,361 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@46061ac id=0 keys=0 selected=0
+17:12:13,361 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@62531325 id=1 keys=-1 selected=-1
+17:12:13,361 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@46061ac id=0 keys=0 selected=0
+17:12:13,361 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@498350b9 execute
+17:12:13,361 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@498350b9 produce enter
+17:12:13,361 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@498350b9 producing
+17:12:13,361 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,361 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17602ms org.eclipse.jetty.io.ManagedSelector@62531325 id=1 keys=0 selected=0
+17:12:13,362 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@62531325 id=1 keys=0 selected=0
+17:12:13,362 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@67151df id=2 keys=-1 selected=-1
+17:12:13,362 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@62531325 id=1 keys=0 selected=0
+17:12:13,362 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2ace6a1b execute
+17:12:13,362 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2ace6a1b produce enter
+17:12:13,362 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2ace6a1b producing
+17:12:13,362 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,362 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17603ms org.eclipse.jetty.io.ManagedSelector@67151df id=2 keys=0 selected=0
+17:12:13,363 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@67151df id=2 keys=0 selected=0
+17:12:13,363 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17603ms org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@4fc0f3e7
+17:12:13,363 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@67151df id=2 keys=0 selected=0
+17:12:13,363 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3610783d{HTTP/1.1,[http/1.1]}{0.0.0.0:8890} added {acceptor-0@33d6c551,POJO}
+17:12:13,363 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@6930318e execute
+17:12:13,363 DEBUG QueuedThreadPool:execute:373 - queue acceptor-0@33d6c551
+17:12:13,363 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@6930318e produce enter
+17:12:13,363  INFO ServerConnector:doStart:270 - Started ServerConnector@3610783d{HTTP/1.1,[http/1.1]}{0.0.0.0:8890}
+17:12:13,363 DEBUG QueuedThreadPool:run:571 - run acceptor-0@33d6c551
+17:12:13,363 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@6930318e producing
+17:12:13,363 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17604ms ServerConnector@3610783d{HTTP/1.1,[http/1.1]}{0.0.0.0:8890}
+17:12:13,364 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,364  INFO Server:doStart:397 - Started @17605ms
+17:12:13,364 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17605ms org.eclipse.jetty.server.Server@7fc81c43
+17:12:13,364 ERROR Main:runServer:117 - Server has started at port: 8890
+17:12:13,364 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@4e8c580f added {qtp884780934{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:12:13,365 DEBUG ContainerLifeCycle:addBean:323 - HttpConnectionFactory@427f17a8[HTTP/1.1] added {HttpConfiguration@4706befb{32768/8192,8192/8192,https://:0,[]},POJO}
+17:12:13,365 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3af797ef{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@4e8c580f,UNMANAGED}
+17:12:13,365 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3af797ef{null,[]}{0.0.0.0:0} added {qtp884780934{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:12:13,365 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3af797ef{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@1617e902,AUTO}
+17:12:13,365 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3af797ef{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@f054e,POJO}
+17:12:13,365 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3af797ef{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@427f17a8[HTTP/1.1],AUTO}
+17:12:13,365 DEBUG ServerConnector:addConnectionFactory:396 - ServerConnector@3af797ef{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@427f17a8[HTTP/1.1]
+17:12:13,366 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3af797ef{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@728c92d2,MANAGED}
+17:12:13,366 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@4e8c580f added {ServerConnector@3af797ef{HTTP/1.1,[http/1.1]}{0.0.0.0:8891},AUTO}
+17:12:13,366 DEBUG DecoratedObjectFactory:addDecorator:52 - Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@5bfa3a78
+17:12:13,366 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@5d349607 added {org.eclipse.jetty.server.session.HashSessionManager@2569dd9a,AUTO}
+17:12:13,366 DEBUG ContainerLifeCycle:addBean:323 - o.e.j.s.ServletContextHandler@3365d1e7{/,null,null} added {org.eclipse.jetty.server.session.SessionHandler@5d349607,MANAGED}
+17:12:13,366 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@5d349607 added {org.eclipse.jetty.servlet.ServletHandler@39c61409,MANAGED}
+17:12:13,367 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@4e8c580f added {o.e.j.s.ServletContextHandler@3365d1e7{http//localhost,null,null},MANAGED}
+17:12:13,367 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@4e8c580f added {org.eclipse.jetty.servlet.ServletHandler@403b3998,MANAGED}
+17:12:13,367 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@403b3998 added {org.example.handlers.MainServlet-2b55b908@3159dd47==org.example.handlers.MainServlet,-1,false,AUTO}
+17:12:13,367 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@403b3998 added {[/convert]=>org.example.handlers.MainServlet-2b55b908,POJO}
+17:12:13,367 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@403b3998 added {org.example.handlers.TransportServlet-3622af6c@756cd8ef==org.example.handlers.TransportServlet,-1,false,AUTO}
+17:12:13,367 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@403b3998 added {[/]=>org.example.handlers.TransportServlet-3622af6c,POJO}
+17:12:13,367 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.Server@4e8c580f
+17:12:13,367  INFO Server:doStart:345 - jetty-9.3.7.v20160115
+17:12:13,368 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.server.Server@4e8c580f
+17:12:13,368 DEBUG AbstractLifeCycle:setStarting:185 - starting qtp884780934{STOPPED,8<=0<=200,i=0,q=0}
+17:12:13,369 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17609ms qtp884780934{STARTED,8<=8<=200,i=6,q=0}
+17:12:13,369 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.servlet.ServletHandler@403b3998
+17:12:13,369 DEBUG ServletHandler:updateMappings:1511 - Chose path=/convert mapped to servlet=org.example.handlers.MainServlet-2b55b908 from default=false
+17:12:13,369 DEBUG ServletHandler:updateMappings:1511 - Chose path=/ mapped to servlet=org.example.handlers.TransportServlet-3622af6c from default=false
+17:12:13,369 DEBUG ServletHandler:updateMappings:1532 - filterNameMap={}
+17:12:13,369 DEBUG ServletHandler:updateMappings:1533 - pathFilters=null
+17:12:13,369 DEBUG ServletHandler:updateMappings:1534 - servletFilterMap=null
+17:12:13,369 DEBUG ServletHandler:updateMappings:1535 - servletPathMap={/convert=org.example.handlers.MainServlet-2b55b908@3159dd47==org.example.handlers.MainServlet,-1,false, /=org.example.handlers.TransportServlet-3622af6c@756cd8ef==org.example.handlers.TransportServlet,-1,false}
+17:12:13,369 DEBUG ServletHandler:updateMappings:1536 - servletNameMap={org.example.handlers.TransportServlet-3622af6c=org.example.handlers.TransportServlet-3622af6c@756cd8ef==org.example.handlers.TransportServlet,-1,false, org.example.handlers.MainServlet-2b55b908=org.example.handlers.MainServlet-2b55b908@3159dd47==org.example.handlers.MainServlet,-1,false}
+17:12:13,370 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.MainServlet-2b55b908@3159dd47==org.example.handlers.MainServlet,-1,false
+17:12:13,370 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17610ms org.example.handlers.MainServlet-2b55b908@3159dd47==org.example.handlers.MainServlet,-1,false
+17:12:13,370 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.TransportServlet-3622af6c@756cd8ef==org.example.handlers.TransportServlet,-1,false
+17:12:13,370 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17611ms org.example.handlers.TransportServlet-3622af6c@756cd8ef==org.example.handlers.TransportServlet,-1,false
+17:12:13,370 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.servlet.ServletHandler@403b3998
+17:12:13,370 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17611ms org.eclipse.jetty.servlet.ServletHandler@403b3998
+17:12:13,370 DEBUG AbstractLifeCycle:setStarting:185 - starting ServerConnector@3af797ef{HTTP/1.1,[http/1.1]}{0.0.0.0:8891}
+17:12:13,371 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3af797ef{HTTP/1.1,[http/1.1]}{0.0.0.0:8891} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8891],POJO}
+17:12:13,371 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@1617e902
+17:12:13,371 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17611ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@1617e902
+17:12:13,371 DEBUG AbstractLifeCycle:setStarting:185 - starting HttpConnectionFactory@427f17a8[HTTP/1.1]
+17:12:13,371 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17612ms HttpConnectionFactory@427f17a8[HTTP/1.1]
+17:12:13,371 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@728c92d2
+17:12:13,371 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@5c79a2e9 id=0 keys=-1 selected=-1
+17:12:13,372 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17613ms org.eclipse.jetty.io.ManagedSelector@5c79a2e9 id=0 keys=0 selected=0
+17:12:13,372 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@5c79a2e9 id=0 keys=0 selected=0
+17:12:13,372 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@4bbe211c id=1 keys=-1 selected=-1
+17:12:13,372 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@5c79a2e9 id=0 keys=0 selected=0
+17:12:13,372 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@7cdbe34e execute
+17:12:13,373 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@7cdbe34e produce enter
+17:12:13,373 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@7cdbe34e producing
+17:12:13,373 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,373 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17614ms org.eclipse.jetty.io.ManagedSelector@4bbe211c id=1 keys=0 selected=0
+17:12:13,373 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@4bbe211c id=1 keys=0 selected=0
+17:12:13,373 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@3851fdb9 id=2 keys=-1 selected=-1
+17:12:13,373 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@4bbe211c id=1 keys=0 selected=0
+17:12:13,373 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2b77d28e execute
+17:12:13,373 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2b77d28e produce enter
+17:12:13,374 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@2b77d28e producing
+17:12:13,374 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,374 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17615ms org.eclipse.jetty.io.ManagedSelector@3851fdb9 id=2 keys=0 selected=0
+17:12:13,374 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@3851fdb9 id=2 keys=0 selected=0
+17:12:13,374 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17615ms org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@728c92d2
+17:12:13,374 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@3851fdb9 id=2 keys=0 selected=0
+17:12:13,374 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@3af797ef{HTTP/1.1,[http/1.1]}{0.0.0.0:8891} added {acceptor-0@62b6c6af,POJO}
+17:12:13,374 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@3abf2106 execute
+17:12:13,374 DEBUG QueuedThreadPool:execute:373 - queue acceptor-0@62b6c6af
+17:12:13,375 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@3abf2106 produce enter
+17:12:13,375 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@3abf2106 producing
+17:12:13,375  INFO ServerConnector:doStart:270 - Started ServerConnector@3af797ef{HTTP/1.1,[http/1.1]}{0.0.0.0:8891}
+17:12:13,375 DEBUG QueuedThreadPool:run:571 - run acceptor-0@62b6c6af
+17:12:13,375 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17616ms ServerConnector@3af797ef{HTTP/1.1,[http/1.1]}{0.0.0.0:8891}
+17:12:13,375 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,375  INFO Server:doStart:397 - Started @17616ms
+17:12:13,376 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17616ms org.eclipse.jetty.server.Server@4e8c580f
+17:12:13,376 ERROR Main:runServer:117 - Server has started at port: 8891
+17:12:13,376 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@4945274e added {qtp1934184186{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:12:13,376 DEBUG ContainerLifeCycle:addBean:323 - HttpConnectionFactory@7ecea7ea[HTTP/1.1] added {HttpConfiguration@2a999522{32768/8192,8192/8192,https://:0,[]},POJO}
+17:12:13,376 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@73010a6f{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@4945274e,UNMANAGED}
+17:12:13,377 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@73010a6f{null,[]}{0.0.0.0:0} added {qtp1934184186{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:12:13,377 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@73010a6f{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@131e2015,AUTO}
+17:12:13,377 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@73010a6f{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@78fb0212,POJO}
+17:12:13,377 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@73010a6f{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@7ecea7ea[HTTP/1.1],AUTO}
+17:12:13,377 DEBUG ServerConnector:addConnectionFactory:396 - ServerConnector@73010a6f{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@7ecea7ea[HTTP/1.1]
+17:12:13,377 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@73010a6f{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@1eadb8aa,MANAGED}
+17:12:13,378 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@4945274e added {ServerConnector@73010a6f{HTTP/1.1,[http/1.1]}{0.0.0.0:8892},AUTO}
+17:12:13,378 DEBUG DecoratedObjectFactory:addDecorator:52 - Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@7c512de2
+17:12:13,378 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@7781275 added {org.eclipse.jetty.server.session.HashSessionManager@27337b1a,AUTO}
+17:12:13,378 DEBUG ContainerLifeCycle:addBean:323 - o.e.j.s.ServletContextHandler@5428ffbe{/,null,null} added {org.eclipse.jetty.server.session.SessionHandler@7781275,MANAGED}
+17:12:13,378 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@7781275 added {org.eclipse.jetty.servlet.ServletHandler@2163f6e4,MANAGED}
+17:12:13,378 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@4945274e added {o.e.j.s.ServletContextHandler@5428ffbe{http//localhost,null,null},MANAGED}
+17:12:13,378 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@4945274e added {org.eclipse.jetty.servlet.ServletHandler@66cfa307,MANAGED}
+17:12:13,378 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@66cfa307 added {org.example.handlers.MainServlet-5a98ef6f@3b16d894==org.example.handlers.MainServlet,-1,false,AUTO}
+17:12:13,378 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@66cfa307 added {[/convert]=>org.example.handlers.MainServlet-5a98ef6f,POJO}
+17:12:13,379 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@66cfa307 added {org.example.handlers.TransportServlet-495e2e8d@83d88f2e==org.example.handlers.TransportServlet,-1,false,AUTO}
+17:12:13,379 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@66cfa307 added {[/]=>org.example.handlers.TransportServlet-495e2e8d,POJO}
+17:12:13,379 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.Server@4945274e
+17:12:13,379  INFO Server:doStart:345 - jetty-9.3.7.v20160115
+17:12:13,379 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.server.Server@4945274e
+17:12:13,379 DEBUG AbstractLifeCycle:setStarting:185 - starting qtp1934184186{STOPPED,8<=0<=200,i=0,q=0}
+17:12:13,381 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17621ms qtp1934184186{STARTED,8<=8<=200,i=6,q=0}
+17:12:13,381 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.servlet.ServletHandler@66cfa307
+17:12:13,381 DEBUG ServletHandler:updateMappings:1511 - Chose path=/convert mapped to servlet=org.example.handlers.MainServlet-5a98ef6f from default=false
+17:12:13,381 DEBUG ServletHandler:updateMappings:1511 - Chose path=/ mapped to servlet=org.example.handlers.TransportServlet-495e2e8d from default=false
+17:12:13,381 DEBUG ServletHandler:updateMappings:1532 - filterNameMap={}
+17:12:13,381 DEBUG ServletHandler:updateMappings:1533 - pathFilters=null
+17:12:13,381 DEBUG ServletHandler:updateMappings:1534 - servletFilterMap=null
+17:12:13,381 DEBUG ServletHandler:updateMappings:1535 - servletPathMap={/convert=org.example.handlers.MainServlet-5a98ef6f@3b16d894==org.example.handlers.MainServlet,-1,false, /=org.example.handlers.TransportServlet-495e2e8d@83d88f2e==org.example.handlers.TransportServlet,-1,false}
+17:12:13,382 DEBUG ServletHandler:updateMappings:1536 - servletNameMap={org.example.handlers.MainServlet-5a98ef6f=org.example.handlers.MainServlet-5a98ef6f@3b16d894==org.example.handlers.MainServlet,-1,false, org.example.handlers.TransportServlet-495e2e8d=org.example.handlers.TransportServlet-495e2e8d@83d88f2e==org.example.handlers.TransportServlet,-1,false}
+17:12:13,382 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.MainServlet-5a98ef6f@3b16d894==org.example.handlers.MainServlet,-1,false
+17:12:13,382 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17622ms org.example.handlers.MainServlet-5a98ef6f@3b16d894==org.example.handlers.MainServlet,-1,false
+17:12:13,382 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.TransportServlet-495e2e8d@83d88f2e==org.example.handlers.TransportServlet,-1,false
+17:12:13,382 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17623ms org.example.handlers.TransportServlet-495e2e8d@83d88f2e==org.example.handlers.TransportServlet,-1,false
+17:12:13,382 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.servlet.ServletHandler@66cfa307
+17:12:13,382 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17623ms org.eclipse.jetty.servlet.ServletHandler@66cfa307
+17:12:13,382 DEBUG AbstractLifeCycle:setStarting:185 - starting ServerConnector@73010a6f{HTTP/1.1,[http/1.1]}{0.0.0.0:8892}
+17:12:13,383 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@73010a6f{HTTP/1.1,[http/1.1]}{0.0.0.0:8892} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8892],POJO}
+17:12:13,383 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@131e2015
+17:12:13,383 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17623ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@131e2015
+17:12:13,383 DEBUG AbstractLifeCycle:setStarting:185 - starting HttpConnectionFactory@7ecea7ea[HTTP/1.1]
+17:12:13,383 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17624ms HttpConnectionFactory@7ecea7ea[HTTP/1.1]
+17:12:13,383 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@1eadb8aa
+17:12:13,383 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@f352cfc id=0 keys=-1 selected=-1
+17:12:13,384 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17625ms org.eclipse.jetty.io.ManagedSelector@f352cfc id=0 keys=0 selected=0
+17:12:13,384 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@f352cfc id=0 keys=0 selected=0
+17:12:13,384 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@74b76882 id=1 keys=-1 selected=-1
+17:12:13,384 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@f352cfc id=0 keys=0 selected=0
+17:12:13,384 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@520a9be execute
+17:12:13,384 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@520a9be produce enter
+17:12:13,385 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@520a9be producing
+17:12:13,385 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,385 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17626ms org.eclipse.jetty.io.ManagedSelector@74b76882 id=1 keys=0 selected=0
+17:12:13,385 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@74b76882 id=1 keys=0 selected=0
+17:12:13,385 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@44f0d6b5 id=2 keys=-1 selected=-1
+17:12:13,385 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@74b76882 id=1 keys=0 selected=0
+17:12:13,386 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@bf09459 execute
+17:12:13,386 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@bf09459 produce enter
+17:12:13,386 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@bf09459 producing
+17:12:13,386 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,386 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17627ms org.eclipse.jetty.io.ManagedSelector@44f0d6b5 id=2 keys=0 selected=0
+17:12:13,386 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@44f0d6b5 id=2 keys=0 selected=0
+17:12:13,386 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17627ms org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@1eadb8aa
+17:12:13,386 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@44f0d6b5 id=2 keys=0 selected=0
+17:12:13,386 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@73010a6f{HTTP/1.1,[http/1.1]}{0.0.0.0:8892} added {acceptor-0@3f99169e,POJO}
+17:12:13,386 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@4819131f execute
+17:12:13,387 DEBUG QueuedThreadPool:execute:373 - queue acceptor-0@3f99169e
+17:12:13,387 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@4819131f produce enter
+17:12:13,387 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@4819131f producing
+17:12:13,387  INFO ServerConnector:doStart:270 - Started ServerConnector@73010a6f{HTTP/1.1,[http/1.1]}{0.0.0.0:8892}
+17:12:13,387 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,387 DEBUG QueuedThreadPool:run:571 - run acceptor-0@3f99169e
+17:12:13,387 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17628ms ServerConnector@73010a6f{HTTP/1.1,[http/1.1]}{0.0.0.0:8892}
+17:12:13,387  INFO Server:doStart:397 - Started @17628ms
+17:12:13,388 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17628ms org.eclipse.jetty.server.Server@4945274e
+17:12:13,388 ERROR Main:runServer:117 - Server has started at port: 8892
+17:12:13,388 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@56d1178a added {qtp426614621{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:12:13,388 DEBUG ContainerLifeCycle:addBean:323 - HttpConnectionFactory@14d6269b[HTTP/1.1] added {HttpConfiguration@638cef79{32768/8192,8192/8192,https://:0,[]},POJO}
+17:12:13,388 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@48dd2b22{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.server.Server@56d1178a,UNMANAGED}
+17:12:13,389 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@48dd2b22{null,[]}{0.0.0.0:0} added {qtp426614621{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+17:12:13,389 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@48dd2b22{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@166e0322,AUTO}
+17:12:13,389 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@48dd2b22{null,[]}{0.0.0.0:0} added {org.eclipse.jetty.io.ArrayByteBufferPool@6d9a2e5c,POJO}
+17:12:13,389 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@48dd2b22{null,[http/1.1]}{0.0.0.0:0} added {HttpConnectionFactory@14d6269b[HTTP/1.1],AUTO}
+17:12:13,389 DEBUG ServerConnector:addConnectionFactory:396 - ServerConnector@48dd2b22{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@14d6269b[HTTP/1.1]
+17:12:13,389 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@48dd2b22{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added {org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6969f3b1,MANAGED}
+17:12:13,390 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@56d1178a added {ServerConnector@48dd2b22{HTTP/1.1,[http/1.1]}{0.0.0.0:8893},AUTO}
+17:12:13,390 DEBUG DecoratedObjectFactory:addDecorator:52 - Adding Decorator: org.eclipse.jetty.util.DeprecationWarning@f789aad
+17:12:13,390 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@2edd245b added {org.eclipse.jetty.server.session.HashSessionManager@12890712,AUTO}
+17:12:13,390 DEBUG ContainerLifeCycle:addBean:323 - o.e.j.s.ServletContextHandler@345b9a89{/,null,null} added {org.eclipse.jetty.server.session.SessionHandler@2edd245b,MANAGED}
+17:12:13,390 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.session.SessionHandler@2edd245b added {org.eclipse.jetty.servlet.ServletHandler@7f3dd35d,MANAGED}
+17:12:13,390 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@56d1178a added {o.e.j.s.ServletContextHandler@345b9a89{http//localhost,null,null},MANAGED}
+17:12:13,391 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.server.Server@56d1178a added {org.eclipse.jetty.servlet.ServletHandler@3805df1d,MANAGED}
+17:12:13,391 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@3805df1d added {org.example.handlers.MainServlet-626eee98@ea0eb8c2==org.example.handlers.MainServlet,-1,false,AUTO}
+17:12:13,391 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@3805df1d added {[/convert]=>org.example.handlers.MainServlet-626eee98,POJO}
+17:12:13,391 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@3805df1d added {org.example.handlers.TransportServlet-a89bf8e@a1d0c099==org.example.handlers.TransportServlet,-1,false,AUTO}
+17:12:13,391 DEBUG ContainerLifeCycle:addBean:323 - org.eclipse.jetty.servlet.ServletHandler@3805df1d added {[/]=>org.example.handlers.TransportServlet-a89bf8e,POJO}
+17:12:13,391 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.Server@56d1178a
+17:12:13,391  INFO Server:doStart:345 - jetty-9.3.7.v20160115
+17:12:13,391 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.server.Server@56d1178a
+17:12:13,392 DEBUG AbstractLifeCycle:setStarting:185 - starting qtp426614621{STOPPED,8<=0<=200,i=0,q=0}
+17:12:13,393 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17633ms qtp426614621{STARTED,8<=8<=200,i=6,q=0}
+17:12:13,393 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.servlet.ServletHandler@3805df1d
+17:12:13,393 DEBUG ServletHandler:updateMappings:1511 - Chose path=/convert mapped to servlet=org.example.handlers.MainServlet-626eee98 from default=false
+17:12:13,393 DEBUG ServletHandler:updateMappings:1511 - Chose path=/ mapped to servlet=org.example.handlers.TransportServlet-a89bf8e from default=false
+17:12:13,393 DEBUG ServletHandler:updateMappings:1532 - filterNameMap={}
+17:12:13,393 DEBUG ServletHandler:updateMappings:1533 - pathFilters=null
+17:12:13,393 DEBUG ServletHandler:updateMappings:1534 - servletFilterMap=null
+17:12:13,393 DEBUG ServletHandler:updateMappings:1535 - servletPathMap={/convert=org.example.handlers.MainServlet-626eee98@ea0eb8c2==org.example.handlers.MainServlet,-1,false, /=org.example.handlers.TransportServlet-a89bf8e@a1d0c099==org.example.handlers.TransportServlet,-1,false}
+17:12:13,393 DEBUG ServletHandler:updateMappings:1536 - servletNameMap={org.example.handlers.TransportServlet-a89bf8e=org.example.handlers.TransportServlet-a89bf8e@a1d0c099==org.example.handlers.TransportServlet,-1,false, org.example.handlers.MainServlet-626eee98=org.example.handlers.MainServlet-626eee98@ea0eb8c2==org.example.handlers.MainServlet,-1,false}
+17:12:13,393 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.MainServlet-626eee98@ea0eb8c2==org.example.handlers.MainServlet,-1,false
+17:12:13,393 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17634ms org.example.handlers.MainServlet-626eee98@ea0eb8c2==org.example.handlers.MainServlet,-1,false
+17:12:13,393 DEBUG AbstractLifeCycle:setStarting:185 - starting org.example.handlers.TransportServlet-a89bf8e@a1d0c099==org.example.handlers.TransportServlet,-1,false
+17:12:13,394 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17634ms org.example.handlers.TransportServlet-a89bf8e@a1d0c099==org.example.handlers.TransportServlet,-1,false
+17:12:13,394 DEBUG AbstractHandler:doStart:58 - starting org.eclipse.jetty.servlet.ServletHandler@3805df1d
+17:12:13,394 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17634ms org.eclipse.jetty.servlet.ServletHandler@3805df1d
+17:12:13,394 DEBUG AbstractLifeCycle:setStarting:185 - starting ServerConnector@48dd2b22{HTTP/1.1,[http/1.1]}{0.0.0.0:8893}
+17:12:13,394 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@48dd2b22{HTTP/1.1,[http/1.1]}{0.0.0.0:8893} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8893],POJO}
+17:12:13,394 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@166e0322
+17:12:13,394 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17635ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@166e0322
+17:12:13,394 DEBUG AbstractLifeCycle:setStarting:185 - starting HttpConnectionFactory@14d6269b[HTTP/1.1]
+17:12:13,395 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17635ms HttpConnectionFactory@14d6269b[HTTP/1.1]
+17:12:13,395 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6969f3b1
+17:12:13,395 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@66260b13 id=0 keys=-1 selected=-1
+17:12:13,396 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17636ms org.eclipse.jetty.io.ManagedSelector@66260b13 id=0 keys=0 selected=0
+17:12:13,396 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@66260b13 id=0 keys=0 selected=0
+17:12:13,396 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@70890404 id=1 keys=-1 selected=-1
+17:12:13,396 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@66260b13 id=0 keys=0 selected=0
+17:12:13,396 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@56c18913 execute
+17:12:13,396 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@56c18913 produce enter
+17:12:13,396 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@56c18913 producing
+17:12:13,396 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,397 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17637ms org.eclipse.jetty.io.ManagedSelector@70890404 id=1 keys=0 selected=0
+17:12:13,397 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@70890404 id=1 keys=0 selected=0
+17:12:13,397 DEBUG AbstractLifeCycle:setStarting:185 - starting org.eclipse.jetty.io.ManagedSelector@7ae4ea0e id=2 keys=-1 selected=-1
+17:12:13,397 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@70890404 id=1 keys=0 selected=0
+17:12:13,397 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@190fd18b execute
+17:12:13,397 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@190fd18b produce enter
+17:12:13,397 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@190fd18b producing
+17:12:13,397 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,398 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17638ms org.eclipse.jetty.io.ManagedSelector@7ae4ea0e id=2 keys=0 selected=0
+17:12:13,398 DEBUG QueuedThreadPool:execute:373 - queue org.eclipse.jetty.io.ManagedSelector@7ae4ea0e id=2 keys=0 selected=0
+17:12:13,398 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17639ms org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@6969f3b1
+17:12:13,398 DEBUG QueuedThreadPool:run:571 - run org.eclipse.jetty.io.ManagedSelector@7ae4ea0e id=2 keys=0 selected=0
+17:12:13,398 DEBUG ContainerLifeCycle:addBean:323 - ServerConnector@48dd2b22{HTTP/1.1,[http/1.1]}{0.0.0.0:8893} added {acceptor-0@3eabcf,POJO}
+17:12:13,398 DEBUG ExecuteProduceConsume:execute:76 - EPR Idle/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@68020df8 execute
+17:12:13,398 DEBUG QueuedThreadPool:execute:373 - queue acceptor-0@3eabcf
+17:12:13,398 DEBUG ExecuteProduceConsume:produceAndRun:154 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@68020df8 produce enter
+17:12:13,398  INFO ServerConnector:doStart:270 - Started ServerConnector@48dd2b22{HTTP/1.1,[http/1.1]}{0.0.0.0:8893}
+17:12:13,398 DEBUG ExecuteProduceConsume:produceAndRun:160 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@68020df8 producing
+17:12:13,398 DEBUG QueuedThreadPool:run:571 - run acceptor-0@3eabcf
+17:12:13,399 DEBUG ManagedSelector:select:231 - Selector loop waiting on select
+17:12:13,399 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17639ms ServerConnector@48dd2b22{HTTP/1.1,[http/1.1]}{0.0.0.0:8893}
+17:12:13,399  INFO Server:doStart:397 - Started @17640ms
+17:12:13,399 DEBUG AbstractLifeCycle:setStarted:177 - STARTED @17640ms org.eclipse.jetty.server.Server@56d1178a
+17:12:13,399 ERROR Main:runServer:117 - Server has started at port: 8893
