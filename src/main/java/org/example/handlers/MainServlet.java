@@ -69,7 +69,7 @@ public class MainServlet extends HttpServlet {
                 return null;
             }
         } catch (JAXBException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return null;
         }
