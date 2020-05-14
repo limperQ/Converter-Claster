@@ -113,13 +113,14 @@ public class TransportServlet extends HttpServlet {
                     tryCounter = 0;
                 }
             } catch (HttpHostConnectException e) {
+                log.error(e.getMessage());
                 isFault = prepateToRetry();
             } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
+                log.error(e.getMessage());
             } catch (ClientProtocolException e) {
-                e.printStackTrace();
+                log.error(e.getMessage());
             } catch (IOException e) {
-                e.printStackTrace();
+                log.error(e.getMessage());
             }
         } while (isFault && tryCounter < serverCounter);
         return response;

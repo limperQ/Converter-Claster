@@ -52,7 +52,7 @@ public class    Main
                     try {
                         serverIndex = checkServers();
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        log.error(e.getMessage());
                     }
                     if (serverIndex.size() > 0) {
                             for (int index : serverIndex) {
@@ -69,7 +69,7 @@ public class    Main
                     try {
                         Thread.sleep(PropertyManager.getPropertyAsInteger("healthCheckPeriod", 5000));
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        log.error(e.getMessage());
                     }
                 }
             }
@@ -91,6 +91,7 @@ public class    Main
                 }
             }
             catch (HttpHostConnectException ex) {
+                log.error(ex.getMessage());
                 downServerIndexes.add(i);
             }
         }

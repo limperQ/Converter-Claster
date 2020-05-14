@@ -1,6 +1,9 @@
 package org.example.crypto;
 
 import org.apache.commons.codec.binary.Hex;
+import org.example.handlers.TransportServlet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
@@ -8,6 +11,7 @@ import javax.crypto.Cipher;
 
 public class AesCipher {
     private static final String INIT_VECTOR = "rsTewmRhfLseswWe";
+    private static Logger log = LoggerFactory.getLogger(TransportServlet.class.getSimpleName());
 
     public static String encrypt(String secretKey, String plainText) {
         try {
@@ -23,7 +27,7 @@ public class AesCipher {
 
             return new String(Hex.encodeHex(cipher.doFinal(plainText.getBytes("UTF-8")), false));
         } catch (Throwable ex) {
-            System.out.println(ex.getMessage());
+            log.error(ex.getMessage());
         }
         return null;
     }
@@ -42,7 +46,7 @@ public class AesCipher {
 
             return new String(cipher.doFinal(Hex.decodeHex(cipherText.toCharArray())));
         } catch (Throwable ex) {
-            System.out.println(ex.getMessage());
+            log.error(ex.getMessage());
         }
         return null;
     }
